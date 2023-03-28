@@ -1,6 +1,7 @@
 import React from 'react'
-import "./Navbar.css"
-import { BsSearch } from "react-icons/bs";
+import "../CSS/Navbar.css"
+import logo from "../photos/logo.png"
+import { BsSearch,BsHandbag,BsQuestionCircle,BsHeart } from "react-icons/bs";
 import {VscAccount} from "react-icons/vsc"
 import { IconContext } from "react-icons";
 function Navbar() {
@@ -17,15 +18,15 @@ function Navbar() {
         <h4>SS'23</h4>
         <h4>LAST CHANCE</h4>
         </div>
-        <img width="18%" src="https://dibackend.hostx1.de/logo-diesel.svg" alt="logo"/>
+        <img width="18%" src={logo} alt="logo"/>
         <div className='icons'>
-            <IconContext>
+            <IconContext.Provider value={{ size:"2em"}}>
           <div>  <BsSearch /></div>
           <div> <VscAccount/></div> 
-          <div> <VscAccount/></div> 
-          <div> <VscAccount/></div> 
-          <div> <VscAccount/></div> 
-          </IconContext>
+          <div> <BsQuestionCircle/></div> 
+          <div> <BsHeart/></div> 
+          <div> <BsHandbag/></div> 
+          </IconContext.Provider>
         </div>
 
     </div>
