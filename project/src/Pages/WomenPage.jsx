@@ -1,9 +1,10 @@
 import React from 'react'
+import ProductList from '../component/ProductList'
 
-function WomenPage() {
+export default function WomenPage() {
   return (
-    <div>WomenPage</div>
+    <div>
+      <ProductList/>
+    </div>
   )
 }
-
-export default WomenPage
