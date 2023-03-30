@@ -56,7 +56,6 @@ export default function Navbar() {
     </Box>
   );
 }
-
 const DesktopNav = () => {
   const linkColor = useColorModeValue('white', 'white');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
