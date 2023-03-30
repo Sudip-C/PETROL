@@ -9,7 +9,7 @@
 .bottom-nav{
     display:flex;
     justify-content: space-between;
-    background-color: rgba(196, 23, 23, 0.9);
+    background-color: rgba(247, 31, 31, 0.9);
     color: white;
 }
 .bottom-nav h4{
