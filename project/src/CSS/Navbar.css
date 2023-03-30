@@ -12,6 +12,7 @@
 
 .bottom-nav{
     display:flex;
+
     justify-content: space-evenly;
     background-color: rgba(254, 38, 38, 0.9);
     color: white;

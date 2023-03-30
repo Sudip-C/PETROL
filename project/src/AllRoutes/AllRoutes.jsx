@@ -28,7 +28,6 @@ function AllRoutes() {
         <Route path='/product/:id/edit' element={<EditProductPage/>}/>
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
         </Routes>
-
     </div>
   )
 }
