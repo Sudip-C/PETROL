@@ -1,6 +1,7 @@
 import {
   Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Divider, Flex, Heading, HStack, Input, Link, Stack, Text, useColorModeValue as mode, VStack,
 } from '@chakra-ui/react'
+import { Link as RoutLink } from 'react-router-dom'
 
 
 const CartOrderSummary = () => {
@@ -44,9 +45,9 @@ const CartOrderSummary = () => {
         Cash on Delivery applicable only on orders below ₹10,000
       </Text>
       {/* checkout button  */}
-      <Button bg={'blackAlpha.900'} colorScheme={"white"} size="lg" fontSize="md" borderRadius={'none'} >
+      <RoutLink to='/checkout'> <Button bg={'blackAlpha.900'} colorScheme={"white"} w={'100%'} fontSize="md" borderRadius={'none'} >
         Checkout
-      </Button>
+      </Button></RoutLink>
       <Flex mt="6" fontWeight="semibold" justify={'center'}>
         <p>or</p>
         <Link color={mode('blue.500', 'blue.200')}>Continue shopping</Link>

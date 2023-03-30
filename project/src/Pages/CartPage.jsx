@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from 'react'
 import CartItem from '../component/CartComponent/CartItem'
 import CartOrderSummary from '../component/CartComponent/CartOrderSummary'
+import EmptyCart from '../component/CartComponent/EmptyCart'
 import { cartData } from '../component/CartComponent/Page'
 
 
@@ -24,13 +25,14 @@ const CartPage = () => {
   // useEffect(()=>{
   //   get()
   // },[])
-
+let isTrue=true
   return (
-    <Box
+      isTrue?<EmptyCart />:
+      <Box
       maxW={{ base: '3xl', lg: '7xl', }}
       mx="auto"
       px={{ base: '4', md: '8', lg: '20', }}
-      py={{ base: '6', md: '8', lg: '12', }} >
+      py={{ base: '2', md: '3', lg: '4', }} >
 
       <Heading fontSize="25px" fontWeight="bold" pb={'15px'} textAlign={'center'}>
         YOUR CART

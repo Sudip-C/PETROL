@@ -3,29 +3,19 @@ import { BsSearch, BsHandbag, BsQuestionCircle, BsHeart } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc"
 import { IconContext } from "react-icons";
 import logo from '../photos/logo.png'
-
-//   <IconContext.Provider value={{ size:"2em"}}>
-// <div>  <BsSearch /></div>
-// <div> <VscAccount/></div> 
-// <div> <BsQuestionCircle/></div> 
-// <div> <BsHeart/></div> 
-// <div> <BsHandbag/></div> 
-// </IconContext.Provider>
-
-
-
-import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Image } from '@chakra-ui/react';
-
-import { HamburgerIcon, CloseIcon, SearchIcon } from '@chakra-ui/icons';
+import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Image , Icon} from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon, SearchIcon,ChevronDownIcon } from '@chakra-ui/icons';
 import { Link as RoutLink } from 'react-router-dom'
-import { FaUser, FaCartPlus } from 'react-icons/fa';
+import { NAV_ITEMS } from "./NavComponent/DropdownItem";
+
+
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
-      <Flex bg={useColorModeValue('rgba(247, 31, 31, 0.9)', 'gray.800')} color={useColorModeValue('gray.600', 'white')} minH={'70px'} py={{ base: 2 }} px={{ base: 4 }} borderColor={useColorModeValue('gray.200', 'gray.900')} align={'center'} >
-        <Flex flex={{ base: 1, md: 'auto' }} ml={{ base: -2 }} display={{ base: 'flex', md: 'flex', lg: 'none' }} alignItems={'center'} >
+    <Box position={'sticky'} w='100%' zIndex={'999'} >
+      <Flex bg={'rgba(247, 31, 31, 0.9)'} minH={'70px'}  >
+        <Flex flex={{ base: 1, md: 'auto' }}  display={{ base: 'flex', md: 'flex', lg: 'none' }} alignItems={'center'} >
           <IconButton
             onClick={onToggle}
             icon={
@@ -38,17 +28,15 @@ export default function Navbar() {
         </Flex>
         {/* menus  */}
         <Flex justify={'space-between'} w={'100%'} alignItems="center">
-          <Flex display={{ base: 'none', md: 'none', lg: 'flex' }} justify="space-evenly" fontWeight="bolder" boxSizing="border-box" >
+          <Flex display={{ base: 'none', md: 'none', lg: 'flex' }} justify="space-evenly" fontWeight="bolder" boxSizing="border-box" ml={{base:'10px'}} >
             <DesktopNav />
           </Flex>
-          {/* logo */}
-          <Flex  >
+          {/* logo */}     
             <Box fontFamily={'heading'} >
               <RoutLink to='/'>
-                <Image src={logo} w={{base:'130px',md:'200px'}}  ml={{base:'50px',md:'170px',lg:'-30px'}} />
+                <Image src={logo} w={{base:'130px',md:'200px'}}  ml={{base:'70px',md:'190px',lg:'-30px'}} />
               </RoutLink>
             </Box>
-          </Flex>
           {/* right section  */}
           <Flex direction={'row'} mr={{base:'0px',md:'5px',lg:'30px'}} border={{base:'none', md:'1px solid white'}} spacing={1} alignItems={'center'} >
             <IconContext.Provider value={{ size: "20px" }} >
@@ -56,7 +44,7 @@ export default function Navbar() {
               <Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box>
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box>
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHeart color="white" /></Box>
-              <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHandbag color="white" /></Box>
+              <RoutLink to='/cart'><Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHandbag color="white" /></Box></RoutLink>
             </IconContext.Provider>
           </Flex>
         </Flex>
@@ -80,27 +68,17 @@ const DesktopNav = () => {
       <Box w="100%">
         <Popover trigger={'hover'} placement={'bottom-start'} w="100%">
           <PopoverTrigger w="100%">
-            <Box p={2} color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder">
+            <Flex p={2} color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder" direction={'row'} gap={6} alignItems={'center'}>
               <Link>MAN</Link>
-              <Link pl={'30px'}>WOMAN</Link>
-              <Link pl={'30px'}>KIDS</Link>
-              <Link pl={'30px'}>SS'M</Link>
-              <Link pl={'30px'}>LAST CHANCE</Link>
-
-
-
-            </Box>
+              <Link>WOMAN</Link>
+              <Link>KIDS</Link>
+              <Link border={'1px solid white'} p={'5px'}>SS'M</Link>
+              <Link>LAST CHANCE</Link>
+            </Flex>
           </PopoverTrigger>
-
-
-          {/* <PopoverContent border={0} boxShadow={'xl'} bg={popoverContentBgColor} p={4} rounded={'xl'} w="100%">
-            <Stack w="100%">
-              {/* <Box w="100%" h="200px" border='1px solid red'></Box> */}
-          {/* <DesktopSubNav  />  */}
-          {/* 
-            </Stack>
+          {/* <PopoverContent w={'100vw'}>
+           <Box w={'100vw'} h={'400px'} bg="blackAlpha.600"></Box>
           </PopoverContent> */}
-
         </Popover>
       </Box>
 
@@ -110,64 +88,65 @@ const DesktopNav = () => {
 
 const MobileNav = () => {
   return (
-    <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'flex' }}>
-
-      <MobileNavItem />
-
+    <Stack
+      bg={useColorModeValue('white', 'gray.800')}
+      p={4}
+      display={{ md: 'block',lg:'none' }}>
+      {NAV_ITEMS.map((navItem) => (
+        <MobileNavItem key={navItem.label} {...navItem} />
+      ))}
     </Stack>
   );
 };
 
-const MobileNavItem = () => {
+const MobileNavItem = ({ label, children, href })=> {
+ 
+
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={onToggle} w="100%" position={'relative'}>
-      <Flex py={2} justify={'space-between'} align={'center'} _hover={{ textDecoration: 'none' }}>
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
+    <Stack spacing={4} onClick={children && onToggle}>
+      <Flex
+        py={2}
+        as={Link}
+        href={href ?? '#'}
+        justify={'space-between'}
+        align={'center'}
+        _hover={{
+          textDecoration: 'none',
+        }}>
+        <Text
+          fontWeight={600}
+          color={useColorModeValue('gray.600', 'gray.200')}>
+          {label}
         </Text>
+        {children && (
+          <Icon
+            as={ChevronDownIcon}
+            transition={'all .25s ease-in-out'}
+            transform={isOpen ? 'rotate(180deg)' : ''}
+            w={6}
+            h={6}
+          />
+        )}
       </Flex>
-      <Stack mt={100} pl={4} borderLeft={1} borderStyle={'solid'} borderColor={useColorModeValue('gray.200', 'gray.700')} align={'start'} rowGap={'50px'} w="100%">
-        <Link _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%" >
 
-          <Text>NEW ARRIVALS</Text>
-          <Image src='https://images.dailyobjects.com/marche/icons/filter/collection-icon.jpg?tr=cm-pad_crop,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' />
-
-        </Link>
-        <Link _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%">
-          <Text>CASES & SLEEVES</Text>
-          <Image src='https://images.dailyobjects.com/marche/icons/sub-category/cases-sleeves-main.png?tr=cm-pad_resize,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' /></Link>
-        <Link _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%">
-          <Text>ACCESSORIES</Text>
-          <Image src='https://images.dailyobjects.com/marche/icons/sub-category/accessories-main.png?tr=cm-pad_resize,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' />
-        </Link>
-        <Link color={'orange.500'} _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%">
-          <Text>SALE</Text>
-          <Image src=' https://images.dailyobjects.com/marche/assets/images/app/android/icons/sale.png?tr=cm-pad_resize,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' />
-        </Link>
-        <Link _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%">
-          <Text>BAGS & WALLETS</Text>
-          <Image src='https://images.dailyobjects.com/marche/icons/sub-category/bags-wallets-main.png?tr=cm-pad_resize,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' />
-        </Link>
-        <Link _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%">
-          <Text>HOME OFFICE</Text>
-          <Image src='https://images.dailyobjects.com/marche/assets/images/app/android/icons/home-office.png?tr=cm-pad_resize,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' />
-        </Link>
-        <Link _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%">
-          <Text>COLLECTIONS</Text>
-          <Image src='https://images.dailyobjects.com/marche/icons/category/collection-menu-icon.png?tr=cm-pad_resize,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' />
-        </Link>
-        <Link _hover={{ textDecoration: 'none' }} display='flex' justifyContent={'space-between'} alignItems={'center'} w="100%">
-
-          <Text>GIFTING</Text>
-          <Image src='https://images.dailyobjects.com/marche/assets/images/other/gifting-bundles-filter-on-gifting-page.png?tr=cm-pad_resize,v-2,w-160,h-160,dpr-1' w='100px' h="100px" borderRadius='50%' />
-
-        </Link>
-
-
-
-      </Stack>
-      {/* </Collapse> */}
+      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
+        <Stack
+          mt={2}
+          pl={4}
+          borderLeft={1}
+          borderStyle={'solid'}
+          borderColor={useColorModeValue('gray.200', 'gray.700')}
+          align={'start'}>
+          {children &&
+            children.map((child) => (
+              <Link key={child.label} py={2} href={child.href}>
+                {child.label}
+              </Link>
+            ))}
+        </Stack>
+      </Collapse>
     </Stack>
   );
 };
