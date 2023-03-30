@@ -10,12 +10,14 @@ import WishlistPage from '../pages/WishlistPage'
 import SingleProductPage from '../pages/SingleProductPage'
 import AddProductPage from '../pages/AddProductPage'
 import EditProductPage from '../pages/EditProductPage'
+import AdminLogin from '../pages/AdminLogin'
 function AllRoutes() {
   return (
     <div>
         <Routes>
         <Route path="/" element={<HomePage/>}  ></Route>
         <Route path="/admin" element={<AdminPage/>}/>
+        <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/kidsection' element={<KidPage/>}/>
         <Route path='/mensection' element={<MenPage/>}/>
         <Route path='/womensection' element={<WomenPage/>}/>

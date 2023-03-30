@@ -18,6 +18,8 @@ const settings = {
   autoplay:true,
   autoplaySpeed:1000,
   draggable:true,
+  arrows:false,
+
   responsive: [
     {
       breakpoint: 1024,
@@ -31,7 +33,7 @@ const settings = {
     {
       breakpoint: 850,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0
       }

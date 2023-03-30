@@ -15,6 +15,7 @@ function Footer() {
   <input type="radio" name="check"></input>
   <label>Women</label>
   </div>
+  <p>By clicking Sign up you have read and agreed to our privacy policy</p>
   <button>Sign Up</button>
 </div>
 <div className='white'>
