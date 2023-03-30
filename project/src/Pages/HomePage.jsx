@@ -16,23 +16,23 @@ function HomePage() {
 <Carousals pictures={banner} height={"700px"}/>
 <div className='top-home'>
   <div className='box-1'>
-    <h2>FIT OF THE WEEK</h2>
-    <h2>MAN|WOMAN</h2>
+    <h1>FIT OF THE WEEK</h1>
+    <h2>MAN | WOMAN</h2>
     <h3>2019 D-STRUKT</h3>
     <p>Always cool, always in style, the D-STRUKT is an essential denim silhouette defined by a slim leg, mid-rise waist and classic fit.</p>
     <button>SHOP NOW</button>
   </div>
   <div className='box-2'>
-<MySlider props={data1}/>
+<MySlider props={data1} />
   </div>
 </div>
 <div className='car-2'>
-  <MySlider props={data2}/>
+  <MySlider props={data2} />
 </div>
 <div className='car-3'>
 <div className='Box-1'>
-    <h2>HIGHLIGHTS</h2>
-    <h2>MAN|WOMAN</h2>
+    <h1>HIGHLIGHTS</h1>
+    <h2>MAN | WOMAN</h2>
     <h3>MONOGRAM EDITION</h3>
     <p>A new evolution of the signature Diesel monogram, spelled out and applied to Denim, Ready to Wear and Accessories</p>
     <button>SHOP NOW</button>
@@ -70,7 +70,7 @@ function HomePage() {
   <h3>LIFETIME SUPPORT</h3>
 </div>
 <div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614575icons-05.webp' alt="contact"/>
+  <img src='https://diesel.gumlet.io/cms_images/1671614585icons-06.webp' alt="contact"/>
   <h3>PRE-ORDER</h3>
 </div>
 <div>

@@ -8,8 +8,11 @@
 .box-1{
     width:30%;
     padding:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     text-align:left;
-    gap:"10px"
+    gap:20px
 }
 .box-2{
     width:70%;
@@ -25,20 +28,29 @@
     width:70%;
     padding:15px;
 }
+.top-home h1{
+    font-size: 33px;
+    font-weight: 600;
+}
+.top-home button{
+width:30%;
+margin-right: auto;
+padding: 10px;
+font-weight: 600;
+color: white;
+background-color: black;
+
+}
 .top-home h2{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
 }
 .top-home h3{
     font-size: 20px;
     font-weight: 500;
 }
 
-.top-home button{
-    background-color: black;
-    padding: 5px;
-    color: white;
-}
+
 
 .car-2{
     width: 85%;
@@ -49,15 +61,29 @@
 .car-3{
     width: 85%;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     display: flex;
-    gap: 20px;
     align-items: center;
 }
-
+.Box-1{
+    width:30%;
+    padding:15px;
+    text-align:left;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.Box-1 button{
+    width: 50%;
+    margin-right: auto;
+}
+.car-3 h1{
+    font-size: 33px;
+    font-weight: 600;
+}
 .car-3 h2{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
 }
 .car-3 h3{
     font-size: 20px;
@@ -65,9 +91,12 @@
 }
 
 .car-3 button{
-    background-color: black;
-    padding: 5px;
+    width:30%;
+    margin-right: auto;
+    padding: 10px;
+    font-weight: 600;
     color: white;
+    background-color: black;
 }
 
 
@@ -89,6 +118,7 @@
 .badges{
     width: 90%;
     margin: auto;
+    margin-top: 60px;
 display: grid;
 grid-template-columns: repeat(4,1fr);
 }
@@ -108,10 +138,12 @@ grid-template-columns: repeat(4,1fr);
 }
 
 .bottom-banner{
+    margin-top: 70px;
     position: relative;
 }
 .bottom-banner img{
-width: 90%;
+   
+width: 100%;
 margin: auto;
 display: block;
 }
@@ -135,9 +167,9 @@ display: block;
 }
 
 @media screen and (min-width:700px) and (max-width:1000px){
+   /*1st carousal*/
     .top-home{
-        border: 1px solid black;
-        width: 85%;
+        width: 100%;
         margin: auto;
         margin-bottom: 25px;
         display: flex;
@@ -148,16 +180,42 @@ display: block;
     .box-1{
         width:100%;
         padding:15px;
-        text-align:left;
-        gap:"10px"
+        text-align:center;
+        display: flex;
+        flex-direction: column;
+        gap:20px
+    }
+    .box-1 h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .box-1 h2{
+        font-weight: 700;
+    }
+    .box-1 h3{
+        text-align: left;
+        font-weight: 600;
+    }
+    .box-1 p{
+        text-align: left;
+    }
+    .box-1 button{
+        width:20%;
+        margin: auto;
     }
     .box-2{
         width:100%;
         padding:15px;
     }
+    /*2nd carousal*/
+    .car-2{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+    /*3rd carousal*/
     .car-3{
-        border: 1px solid black;
-        width: 85%;
+        width: 100%;
         margin: auto;
         margin-bottom: 30px;
         display: flex;
@@ -168,24 +226,90 @@ display: block;
     .Box-1{
         width:100%;
         padding:15px;
-        text-align:left;
-        gap:"10px"
+        text-align:center;
+        display: flex;
+        flex-direction: column;
+    
+        gap:20px
+    }
+    .Box-1 h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .Box-1 h2{
+        font-weight: 700;
+    }
+    .Box-1 h3{
+        text-align: left;
+        font-weight: 600;
+    }
+    .Box-1 button{
+        width:20%;
+        margin: auto;
+    }
+    .Box-1 p{
+        text-align: left;
     }
     .Box-2{
         width:100%;
         padding:15px;
     }
     .badges{
+        
         width: 90%;
         margin: auto;
+        margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    }
+    .badges img{
+        width: 60%;
+        display: block;
+        
+    }
+    .cards{
+        width: 85%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        justify-items: center;
+        gap: 20px;
+         
+     }
+     .bottom-banner{
+        position: relative;
+        margin-top: 70px;
+    }
+    .bottom-banner img{
+        
+    width: 100%;
+    margin: auto;
+    display: block;
+    }
+    .bottom-banner .button1{
+        background-color: white;
+        padding: 5px 10px;
+        color: black;
+        position: absolute;
+        bottom: 40%;
+        left:30%;
+        font-weight: 600;
+    }
+    .bottom-banner .button2{
+        background-color: white;
+        padding: 5px 10px;
+        color: black;
+        position: absolute;
+        bottom: 40%;
+        right:30%;
+        font-weight: 600;
     }
 }
 
 @media screen and (min-width:100px) and (max-width:699px){
     .top-home{
-        width: 85%;
+        width: 100%;
         margin: auto;
         margin-bottom: 25px;
         display: flex;
@@ -196,15 +320,37 @@ display: block;
     .box-1{
         width:100%;
         padding:15px;
-        text-align:left;
-        gap:"10px"
+        text-align:center;
+        display: flex;
+        flex-direction: column;
+        gap:20px
+    }
+    .box-1 h1{
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .baox-1 h2{
+        font-weight: 700;
+    }
+    .box-1 h3{
+        text-align: center;
+        font-weight: 600;
+    }
+    .box-1 p{
+        text-align: center;
+    }
+    .box-1 button{
+        width:40%;
+        margin: auto;
+        font-weight: 600;
     }
     .box-2{
         width:100%;
         padding:15px;
     }
+    /*3rd carousal*/
     .car-3{
-        width: 85%;
+        width: 100%;
         margin: auto;
         margin-bottom: 30px;
         display: flex;
@@ -215,14 +361,34 @@ display: block;
     .Box-1{
         width:100%;
         padding:15px;
-        text-align:left;
-        gap:"10px"
+        text-align:center;
+        display: flex;
+        flex-direction: column;
+        gap:20px
+    }
+    .Box-1 h1{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .Box-1 h2{
+        font-weight: 700;
+    }
+    .Box-1 h3{
+        text-align: center;
+        font-weight: 600;
+    }
+    .Box-1 button{
+        width:40%;
+        margin: auto;
     }
     .Box-2{
         width:100%;
         padding:15px;
     }
+
+
     .badges{
+        margin-top: 60px;
         width: 90%;
         margin: auto;
     display: grid;
@@ -238,4 +404,32 @@ display: block;
         gap: 20px;
          
      }
+     .bottom-banner{
+        position: relative;
+        margin-top: 70px;
+    }
+    .bottom-banner img{
+        
+    width: 100%;
+    margin: auto;
+    display: block;
+    }
+    .bottom-banner .button1{
+        background-color: white;
+        padding: 5px 10px;
+        color: black;
+        position: absolute;
+        bottom: 40%;
+        left:15%;
+        font-weight: 600;
+    }
+    .bottom-banner .button2{
+        background-color: white;
+        padding: 5px 10px;
+        color: black;
+        position: absolute;
+        bottom: 40%;
+        right:15%;
+        font-weight: 600;
+    }
 }
