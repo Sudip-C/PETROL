@@ -8,11 +8,7 @@ import CheckoutPage from './Pages/CheckoutPage';
 function App() {
   return (
     <div className="App">
-     {/* <Navbar/> */}
-     {/* <AllRoutes/> */}
-     {/* <CartPage /> */}
-     {/* <AddressPage /> */}
-     <CheckoutPage />
+   
     </div>
   );
 }
