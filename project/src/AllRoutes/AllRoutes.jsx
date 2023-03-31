@@ -1,11 +1,13 @@
 import React from 'react'
 import {Route, Routes, }from "react-router-dom"
+import CartPage from '../pages/CartPage'
+import CheckoutPage from '../pages/CheckoutPage'
+import HomePage from '../pages/HomePage'
+import Temp from '../tempo/Temp'
 import KidPage from '../pages/KidPage'
-import HomePage from "../pages/HomePage"
 import AdminPage from '../pages/AdminPage'
 import MenPage from '../pages/MenPage'
 import WomenPage from '../pages/WomenPage'
-import CartPage from '../pages/CartPage'
 import WishlistPage from '../pages/WishlistPage'
 import SingleProductPage from '../pages/SingleProductPage'
 import AddProductPage from '../pages/AddProductPage'
@@ -15,6 +17,11 @@ function AllRoutes() {
   return (
     <div>
         <Routes>
+
+        <Route path="/" element={<HomePage/>} />
+        <Route path='/cart' element={<CartPage/>} />
+        <Route path='/checkout' element={<CheckoutPage />} />
+        <Route path='/temp' element={<Temp />} />
         <Route path="/" element={<HomePage/>}  ></Route>
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
@@ -24,11 +31,10 @@ function AllRoutes() {
         <Route path='/cart' element={<CartPage/>}/>
         <Route path='/wishlist' element={<WishlistPage/>}/>
         <Route path="/product/:id" element={<SingleProductPage/>}/>
-        <Route path="/addProduct/:id" element={<AddProductPage/>}/>
+        <Route path="/addProduct/" element={<AddProductPage/>}/>
         <Route path='/product/:id/edit' element={<EditProductPage/>}/>
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
         </Routes>
-
     </div>
   )
 }
