@@ -33,7 +33,7 @@ export default function Navbar() {
           </Flex>
           {/* logo */}     
             <Box fontFamily={'heading'} >
-              <RoutLink to='/temp'>
+              <RoutLink to='/'>
                 <Image src={logo} w={{base:'130px',md:'200px'}}  ml={{base:'70px',md:'190px',lg:'-30px'}} />
               </RoutLink>
             </Box>
