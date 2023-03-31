@@ -7,10 +7,11 @@ import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTri
 import { HamburgerIcon, CloseIcon, SearchIcon,ChevronDownIcon } from '@chakra-ui/icons';
 import { Link as RoutLink } from 'react-router-dom'
 import { NAV_ITEMS } from "./NavComponent/DropdownItem";
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
+  const {  isAuthenticated } = useAuth0();
 
   return (
     <Box position={'sticky'} w='100%' zIndex={'999'} >
@@ -40,8 +41,13 @@ export default function Navbar() {
           {/* right section  */}
           <Flex direction={'row'} mr={{base:'0px',md:'5px',lg:'30px'}} border={{base:'none', md:'1px solid white'}} spacing={1} alignItems={'center'} >
             <IconContext.Provider value={{ size: "20px" }} >
+
+              <RoutLink to={isAuthenticated?"/account":"/login"}><Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} > <VscAccount color="white" /></Box></RoutLink>
+              <Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box>
+
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <VscAccount color="white" /></Box>
-              <RoutLink to='/product/:id'><Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box></RoutLink>
+              <Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box>
+
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box>
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHeart color="white" /></Box>
               <RoutLink to='/cart'><Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHandbag color="white" /></Box></RoutLink>

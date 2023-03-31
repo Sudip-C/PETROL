@@ -4,6 +4,9 @@ import Carousals from '../component/carousal'
 import { TfiHeart} from "react-icons/tfi";
 function SingleProductPage() {
 
+
+  
+
 let data=
   {
     
@@ -20,6 +23,10 @@ let data=
    
    }
 
+  //  const handleAddToCart=()=>{
+  //   arr.push(data)
+  //   localStorage.setItem("'addToCart",JSON.stringify(data))
+  // }
 
   return (
     <div className='main'>
