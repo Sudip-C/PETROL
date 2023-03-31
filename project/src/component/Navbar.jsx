@@ -41,7 +41,7 @@ export default function Navbar() {
           <Flex direction={'row'} mr={{base:'0px',md:'5px',lg:'30px'}} border={{base:'none', md:'1px solid white'}} spacing={1} alignItems={'center'} >
             <IconContext.Provider value={{ size: "20px" }} >
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <VscAccount color="white" /></Box>
-              <Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box>
+              <RoutLink to='/product/:id'><Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box></RoutLink>
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box>
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHeart color="white" /></Box>
               <RoutLink to='/cart'><Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHandbag color="white" /></Box></RoutLink>

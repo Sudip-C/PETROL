@@ -1,22 +1,19 @@
 import React from 'react'
 import {Route, Routes, }from "react-router-dom"
-
-
-
-
-import CartPage from '../pages/CartPage'
-import CheckoutPage from '../pages/CheckoutPage'
-import HomePage from '../pages/HomePage'
+import AddProductPage from '../Pages/AddProductPage'
+import AdminLogin from '../Pages/AdminLogin'
+import AdminPage from '../Pages/AdminPage'
+import CartPage from '../Pages/CartPage'
+import CheckoutPage from '../Pages/CheckoutPage'
+import EditProductPage from '../Pages/EditProductPage'
+import HomePage from '../Pages/HomePage'
+import KidPage from '../Pages/KidPage'
+import MenPage from '../Pages/MenPage'
+import SingleProductPage from '../Pages/SingleProductPage'
+import WishlistPage from '../Pages/WishlistPage'
+import WomenPage from '../Pages/WomenPage'
 import Temp from '../tempo/Temp'
-import KidPage from '../pages/KidPage'
-import AdminPage from '../pages/AdminPage'
-import MenPage from '../pages/MenPage'
-import WomenPage from '../pages/WomenPage'
-import WishlistPage from '../pages/WishlistPage'
-import SingleProductPage from '../pages/SingleProductPage'
-import AddProductPage from '../pages/AddProductPage'
-import EditProductPage from '../pages/EditProductPage'
-import AdminLogin from '../pages/AdminLogin'
+
 function AllRoutes() {
   return (
     <div>
