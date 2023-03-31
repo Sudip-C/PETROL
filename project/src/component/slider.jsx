@@ -66,5 +66,4 @@ return <div key={el.title} className="car"
 
   </div>
 )
-    
-  }
+}

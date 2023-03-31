@@ -19,11 +19,11 @@ root.render(
     }}
   >
     <BrowserRouter>
-    <ChakraProvider>
-    <Provider store={store}>
-    <App />
-    </Provider>
-    </ChakraProvider>
+        <ChakraProvider>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </ChakraProvider>
     </BrowserRouter>
     </Auth0Provider>
 );

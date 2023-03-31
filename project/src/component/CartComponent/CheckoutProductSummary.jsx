@@ -8,7 +8,7 @@ import { cartData } from './Page'
 const CheckoutProductSummary = () => {
   return (
     <Box>
-      <Stack h={'55vh'} pt={'70px'}>
+      <Stack h={{base:'auto',md:'auto',lg:'55vh'}} pt={'70px'}>
         {
 
           cartData.map(el => (
@@ -33,7 +33,7 @@ const CheckoutProductSummary = () => {
 
 
 
-      <Stack spacing="5" rounded="lg" width="full" bg='#F7FAF9' pb="10px" mb='0' h={'45vh'}>
+      <Stack spacing="5" rounded="lg" py={{base:'auto',md:'auto'}} width="full" bg='#F7FAF9' pb="10px" mb='0' h={{base:'auto',md:'auto',lg:'45vh'}}>
         <hr />
         <Flex gap={'15px'}>
           <Input bg={'white'} placeholder="Discount code" pl={'10px'} borderRadius='none' />
