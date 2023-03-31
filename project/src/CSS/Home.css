@@ -1,5 +1,5 @@
 .top-home{
-    width: 85%;
+    width: 95%;
     margin: auto;
     margin-bottom: 25px;
     display: flex;
@@ -53,13 +53,13 @@ background-color: black;
 
 
 .car-2{
-    width: 85%;
+    width: 95%;
     margin: auto;
     margin-bottom: 25px;
 }
 
 .car-3{
-    width: 85%;
+    width: 95%;
     margin: auto;
     margin-bottom: 25px;
     display: flex;
@@ -101,7 +101,7 @@ background-color: black;
 
 
 .cards{
-   width: 85%;
+   width: 95%;
    margin: auto;
    display: grid;
    grid-template-columns: repeat(2,1fr);
@@ -116,7 +116,7 @@ background-color: black;
 
 
 .badges{
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-top: 60px;
 display: grid;
@@ -209,7 +209,7 @@ display: block;
     }
     /*2nd carousal*/
     .car-2{
-        width: 90%;
+        width: 95%;
         margin: auto;
         margin-bottom: 25px;
     }
