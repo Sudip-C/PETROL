@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 const Temp = () => {
     let [data,setData]=useState([])
-   let arr=[]
+   let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
     let getData=()=>{
         fetch('https://waiting-brief-sort.glitch.me/woman')
         .then(res=>res.json()).then(res=>setData(res))
@@ -26,7 +26,7 @@ const Temp = () => {
         <Box display={'grid'} gridTemplateColumns={'repeat(6,1fr)'}>
            {
             data.map(el=>(
-                <Box>
+                <Box key={el.id}>
                     <Image src={el.image[0]} w={'100%'} />
                     <Button onClick={()=>add(el.id)}>add to cart</Button>
                 </Box>

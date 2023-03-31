@@ -7,9 +7,9 @@ const CheckoutPage = () => {
     return (
         <Box>
 
-            <Stack direction={{ base: 'column-reverse', lg: 'row', }} align={{ lg: 'flex-start', }}>
+            <Stack direction={{ base: 'column',md:'column', lg: 'row', }} align={{ lg: 'flex-start', }}>
 
-                <Stack w={'70%'} mx="auto" pl={{ base: '4', md: '8', lg: '20', }}>
+                <Stack w={{base:'100%',md:'90%',lg:'70%'}} mx="auto" pl={{ base: '4', md: '8', lg: '20', }}>
                     <Flex justify={'space-between'} borderBottom="1px solid gray" alignItems={'center'} p={'7px'}>
                         <Heading>
                             DIESEL
@@ -23,7 +23,7 @@ const CheckoutPage = () => {
                     <AddressPage />
                 </Stack>
 
-                <Flex bg={'#F9F8F6'} w={'30%'} px={'10'} mx={'auto'}>
+                <Flex bg={'#F9F8F6'} w={{base:'100%',md:'100%',lg:'30%'}} px={'10'} mx={'auto'}>
                     <Box h={'100vh'} w={'100%'}>
                         <CheckoutProductSummary />
                     </Box>
