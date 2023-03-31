@@ -17,9 +17,9 @@ const EmptyCart = () => {
             maxW={{ base: '3xl', lg: '7xl', }}
             mx="auto"
             px={{ base: '4', md: '8', lg: '20', }}
-            py={{ base: '2', md: '3', lg: '4', }} >
+            py={{ base: '4', md: '5', lg: '6', }} >
 
-            <Heading fontSize="25px" fontWeight="bold" pb={'20px'} textAlign={'center'}>
+            <Heading fontSize="25px" fontWeight="bolder" pb={'20px'} textAlign={'center'}>
                 YOUR CART
             </Heading>
             <Flex
@@ -28,11 +28,11 @@ const EmptyCart = () => {
                 gap={{ base: '8', md: '8', }}>
                 <Box
                     fontWeight={'medium'}
-                    fontSize={'30px'}
+                    fontSize={{base:'20px',md:'27',lg:'30px'}}
                     bg={'#F9F8F6'}
                     p={'15px'}
                     textAlign={'center'}
-                    w='60%'>
+                    w={{base:'100%',md:'80%',lg:'60%'}}>
                     YOUR SHOPPING CART IS EMPTY
                 </Box>
                 <RoutLink to='/'>

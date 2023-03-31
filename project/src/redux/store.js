@@ -6,6 +6,11 @@ import thunk from "redux-thunk"
 const rootReducer=combineReducers({
     productReducer,
     womenReducer
+    })
+
+const rootReducer=combineReducers({
+    productReducer,cartReducer
+
 })
 
 

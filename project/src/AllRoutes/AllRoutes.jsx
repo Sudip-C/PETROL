@@ -1,5 +1,9 @@
 import React from 'react'
 import {Route, Routes, }from "react-router-dom"
+
+
+
+
 import CartPage from '../pages/CartPage'
 import CheckoutPage from '../pages/CheckoutPage'
 import HomePage from '../pages/HomePage'
@@ -17,15 +21,12 @@ function AllRoutes() {
   return (
     <div>
         <Routes>
-
-        <Route path="/" element={<HomePage/>} />
-        <Route path='/cart' element={<CartPage/>} />
-        <Route path='/checkout' element={<CheckoutPage />} />
-        <Route path='/temp' element={<Temp />} />
         <Route path="/" element={<HomePage/>}  ></Route>
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
+        <Route path='/temp' element={<Temp />} />
         <Route path='/kidsection' element={<KidPage/>}/>
+        <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/mensection' element={<MenPage/>}/>
         <Route path='/womensection' element={<WomenPage/>}/>
         <Route path='/cart' element={<CartPage/>}/>
