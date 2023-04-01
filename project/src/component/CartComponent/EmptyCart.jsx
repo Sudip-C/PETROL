@@ -13,13 +13,14 @@ import React from 'react'
 import { Link as RoutLink } from 'react-router-dom'
 
 const EmptyCart = () => {
-    return (
+    return ( 
         <Box
+        py="80px"
         minH={'700px'}
             maxW={{ base: '3xl', lg: '7xl', }}
             mx="auto"
             px={{ base: '4', md: '8', lg: '20', }}
-            py={{ base: '4', md: '5', lg: '6', }} >
+     >
 
             <Heading fontSize="25px" fontWeight="bolder" pb={'20px'} textAlign={'center'}>
                 YOUR CART

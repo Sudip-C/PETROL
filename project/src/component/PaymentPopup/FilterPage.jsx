@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Checkbox, Grid, Text,Heading, Center } from '@chakra-ui/react'
+import { Box, Flex, Input, Checkbox, Grid, Text, Heading, Center, HStack, Select } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import {
     Menu,
@@ -47,6 +47,10 @@ const FilterPage = () => {
         },[category,order])
 
     return (
+
+              
+               
+     
         <Flex direction="column" gap="30px" pb="30px" pt="20px">
         <Center>
         <Flex direction="column" justify="center">
@@ -119,136 +123,144 @@ const FilterPage = () => {
                         borderRadius='md'
                         borderWidth='1px'
                         >
-                         <Flex justify="space-between" alignItems="center" gap="30px"><Text>Size</Text><ChevronDownIcon /></Flex>
-                    </MenuButton>
-                    <MenuList>
-                        <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                        </Grid>
-                    </MenuList>
-                </Menu>
-                <Menu>
-                    <MenuButton rightIcon={<ChevronDownIcon />}
-                      border='1px solid gray'
-                        px={4}
-                        py={2}
-                        transition='all 0.1s'
-                        borderRadius='md'
-                        borderWidth='1px'
+                            <Flex justify="space-between" alignItems="center" gap="30px"><Text>Length</Text><ChevronDownIcon /></Flex>
+                        </MenuButton>
+                        <MenuList>
+                            <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                            </Grid>
+                        </MenuList>
+                    </Menu>
+                    <Menu>
+                        <MenuButton rightIcon={<ChevronDownIcon />}
+                
+                            px={4}
+                            bg="white"
+                            py={2}
+                            transition='all 0.1s'
+                            borderRadius='md'
+                            borderWidth='1px'
                         >
-                         <Flex justify="space-between" alignItems="center" gap="30px"><Text>Length</Text><ChevronDownIcon /></Flex>
-                    </MenuButton>
-                    <MenuList>
-                        <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                        </Grid>
-                    </MenuList>
-                </Menu>
-                <Menu>
-                    <MenuButton rightIcon={<ChevronDownIcon />}
-                      border='1px solid gray'
-                        px={4}
-                        py={2}
-                        transition='all 0.1s'
-                        borderRadius='md'
-                        borderWidth='1px'
+                            <Flex justify="space-between" alignItems="center" gap="30px"><Text>Febric</Text><ChevronDownIcon /></Flex>
+                        </MenuButton>
+                        <MenuList>
+                            <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                            </Grid>
+                        </MenuList>
+                    </Menu>
+                    <Menu>
+                        <MenuButton rightIcon={<ChevronDownIcon />}
+                
+                            px={4}
+                            bg="white"
+                            py={2}
+                            transition='all 0.1s'
+                            borderRadius='md'
+                            borderWidth='1px'
                         >
-                         <Flex justify="space-between" alignItems="center" gap="30px"><Text>Febric</Text><ChevronDownIcon /></Flex>
-                    </MenuButton>
-                    <MenuList>
-                        <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                        </Grid>
-                    </MenuList>
-                </Menu>
-                <Menu>
-                    <MenuButton rightIcon={<ChevronDownIcon />}
-                      border='1px solid gray'
-                        px={4}
-                        py={2}
-                        transition='all 0.1s'
-                        borderRadius='md'
-                        borderWidth='1px'
+                            <Flex justify="space-between" alignItems="center" gap="30px"><Text>Gender</Text><ChevronDownIcon /></Flex>
+                        </MenuButton>
+                        <MenuList>
+                            <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                            </Grid>
+                        </MenuList>
+                    </Menu>
+                    <Menu>
+                        <MenuButton rightIcon={<ChevronDownIcon />}
+                
+                            px={4}
+                            bg="white"
+                            py={2}
+                            transition='all 0.1s'
+                            borderRadius='md'
+                            borderWidth='1px'
                         >
-                         <Flex justify="space-between" alignItems="center" gap="30px"><Text>Gender</Text><ChevronDownIcon /></Flex>
-                    </MenuButton>
-                    <MenuList>
-                        <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                        </Grid>
-                    </MenuList>
-                </Menu>
-                <Menu>
-                    <MenuButton rightIcon={<ChevronDownIcon />}
-                      border='1px solid gray'
-                        px={4}
-                        py={2}
-                        transition='all 0.1s'
-                        borderRadius='md'
-                        borderWidth='1px'
+                            <Flex justify="space-between" alignItems="center" gap="30px"><Text>Sale</Text><ChevronDownIcon /></Flex>
+                        </MenuButton>
+                        <MenuList>
+                            <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                            </Grid>
+                        </MenuList>
+                    </Menu>
+                    <Menu>
+                        <MenuButton rightIcon={<ChevronDownIcon />}
+                
+                            px={4}
+                            bg="white"
+                            py={2}
+                            transition='all 0.1s'
+                            borderRadius='md'
+                            borderWidth='1px'
                         >
-                         <Flex justify="space-between" alignItems="center" gap="30px"><Text>Sale</Text><ChevronDownIcon /></Flex>
-                    </MenuButton>
-                    <MenuList>
-                        <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                            <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
-                        </Grid>
-                    </MenuList>
-                </Menu>
-                <Menu>
-                    <MenuButton rightIcon={<ChevronDownIcon />}
-                      border='1px solid gray'
-                        px={4}
-                        py={2}
-                        transition='all 0.1s'
-                        borderRadius='md'
-                        borderWidth='1px'
-                        >
+                            <Flex justify="space-between" alignItems="center" gap="30px"><Text>Discount</Text><ChevronDownIcon /></Flex>
+                        </MenuButton>
+                        <MenuList>
+                            <Grid templateColumns={'repeat(3,1fr)'} colGap="20px" rowGap="10px">
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                                <MenuItem><Checkbox>Checkbox</Checkbox></MenuItem>
+                            </Grid>
+                        </MenuList>
+                    </Menu>
+                    <Menu>
+                        <MenuButton rightIcon={<ChevronDownIcon />}
+                
+                            w="200px"
+                            px={4}
+                            bg="white"
+                            py={2}
+                            transition='all 0.1s'
+                            borderRadius='md'
+                            borderWidth='1px'
+                        >   
+              
+
                         <Flex justify="space-between" alignItems="center" gap="30px"><Text>Discount</Text><ChevronDownIcon /></Flex>
                     </MenuButton>
                     <MenuList>
@@ -330,6 +342,7 @@ const FilterPage = () => {
                 <option value='alphaone'>Most Popular</option>
             </Select>
          </Flex>
+
         </Flex>
     )
 }
