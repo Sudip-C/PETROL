@@ -1,24 +1,25 @@
 import React from 'react'
-
-import KidPage from '../pages/KidPage'
-import AdminPage from '../pages/AdminPage'
-import MenPage from '../pages/MenPage'
-import WomenPage from '../pages/WomenPage'
-import WishlistPage from '../pages/WishlistPage'
-import SingleProductPage from '../pages/SingleProductPage'
-import AddProductPage from '../pages/AddProductPage'
-import EditProductPage from '../pages/EditProductPage'
-import AdminLogin from '../pages/AdminLogin'
-import Login from "../pages/Login"
-import PrivateRoute from './PrivateRoute';
-import Account from '../pages/Account'
-import AddressBook from '../pages/AddressBook'
-import MyOrders from '../pages/Myorders'
-import {Routes, Route} from"react-router-dom"
-import CartPage from "../pages/CartPage"
-import HomePage from "../pages/HomePage"
+import {Route,Routes} from "react-router-dom"
+import HomePage from "../Pages/HomePage"
+import KidPage from '../Pages/KidPage'
+import AdminPage from '../Pages/AdminPage'
+import MenPage from '../Pages/MenPage'
+import WomenPage from '../Pages/WomenPage'
+import WishlistPage from '../Pages/WishlistPage'
+import SingleProductPage from '../Pages/SingleProductPage'
+import AddProductPage from '../Pages/AddProductPage'
+import EditProductPage from '../Pages/EditProductPage'
+import AdminLogin from '../Pages/AdminLogin'
+import Login from "../Pages/Login"
+import PrivateRoute from '../AllRoutes/PrivateRoute';
+import Account from '../Pages/Account'
+import AddressBook from '../Pages/AddressBook'
+import MyOrders from '../Pages/Myorders'
+import CartPage from "../Pages/CartPage"
 import Temp from "../tempo/Temp"
-import CheckoutPage from "../pages/CheckoutPage"
+import CheckoutPage from '../Pages/CheckoutPage'
+
+
 
 function AllRoutes() {
   return (
@@ -30,9 +31,6 @@ function AllRoutes() {
         <Route path="myorders" element={<MyOrders/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path='/cart' element={<PrivateRoute><CartPage/></PrivateRoute>} />
-       
-   
-
         <Route path="/" element={<HomePage/>}  ></Route>
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>

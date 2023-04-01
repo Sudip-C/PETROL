@@ -7,7 +7,7 @@ function MyOrders() {
   const { logout } = useAuth0()
   return (
     <div className='container'>
-    <div className="main">
+    <div className="mainbody">
       <h1>My Account</h1>
       <div className='box'>
      <Link to="/account"><div > Account Dashboard</div></Link> 
@@ -17,7 +17,7 @@ function MyOrders() {
 
       </div>
     </div>
-    <div className='details'>
+    <div className='Details'>
 my name is sudip
     </div>
     </div>
