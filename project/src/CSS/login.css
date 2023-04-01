@@ -1,0 +1,65 @@
+.login-board{
+    width: 30%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.button button:hover{
+background-color: black;
+color: white;
+}
+@media screen and (min-width:100px) and (max-width:699px){
+    .login-board{
+        width: 70%;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    } 
+    .button button:hover{
+        background-color: black;
+        color: white;
+        }  
+}
+@media screen and (min-width:700px) and (max-width:999px){
+    .login-board{
+        width: 70%;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    }
+    .button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    } 
+    .button button:hover{
+        background-color: black;
+        color: white;
+        }  
+}

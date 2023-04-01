@@ -1,24 +1,41 @@
 import React from 'react'
-import {Route, Routes, }from "react-router-dom"
-import AddProductPage from '../Pages/AddProductPage'
-import AdminLogin from '../Pages/AdminLogin'
-import AdminPage from '../Pages/AdminPage'
-import CartPage from '../Pages/CartPage'
-import CheckoutPage from '../Pages/CheckoutPage'
-import EditProductPage from '../Pages/EditProductPage'
-import HomePage from '../Pages/HomePage'
+import {Route,Routes} from "react-router-dom"
+import HomePage from "../Pages/HomePage"
 import KidPage from '../Pages/KidPage'
+import AdminPage from '../Pages/AdminPage'
 import MenPage from '../Pages/MenPage'
-import SingleProductPage from '../Pages/SingleProductPage'
-import WishlistPage from '../Pages/WishlistPage'
 import WomenPage from '../Pages/WomenPage'
+
 import Temp from '../tempo/Temp'
 import ProductPage from '../Pages/ProductPage'
+
+import WishlistPage from '../Pages/WishlistPage'
+import SingleProductPage from '../Pages/SingleProductPage'
+import AddProductPage from '../Pages/AddProductPage'
+import EditProductPage from '../Pages/EditProductPage'
+import AdminLogin from '../Pages/AdminLogin'
+import Login from "../Pages/Login"
+import PrivateRoute from '../AllRoutes/PrivateRoute';
+import Account from '../Pages/Account'
+import AddressBook from '../Pages/AddressBook'
+import MyOrders from '../Pages/Myorders'
+import CartPage from "../Pages/CartPage"
+import Temp from "../tempo/Temp"
+import CheckoutPage from '../Pages/CheckoutPage'
+
+
+
 
 function AllRoutes() {
   return (
     <div>
         <Routes>
+
+        <Route path="/account" element={<Account/>} />
+        <Route path='/addressbook' element={<AddressBook/>}/>
+        <Route path="myorders" element={<MyOrders/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path='/cart' element={<PrivateRoute><CartPage/></PrivateRoute>} />
         <Route path="/" element={<HomePage/>}  ></Route>
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
@@ -27,10 +44,9 @@ function AllRoutes() {
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/mensection' element={<MenPage/>}/>
         <Route path='/womensection' element={<WomenPage/>}/>
-        <Route path='/cart' element={<CartPage/>}/>
         <Route path='/wishlist' element={<WishlistPage/>}/>
         <Route path="/product/:id" element={<SingleProductPage/>}/>
-        <Route path="/addProduct/" element={<AddProductPage/>}/>
+        <Route path="/addProduct" element={<AddProductPage/>}/>
         <Route path='/product/:id/edit' element={<EditProductPage/>}/>
         <Route path='/product' element={<ProductPage />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
