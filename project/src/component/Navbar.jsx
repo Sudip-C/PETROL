@@ -73,7 +73,7 @@ const DesktopNav = () => {
           <PopoverTrigger w="100%">
             <Flex p={2} color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder" direction={'row'} gap={6} alignItems={'center'}>
               <Link>MAN</Link>
-              <Link>WOMAN</Link>
+            <RoutLink to="/womensection" ><Link>WOMAN</Link></RoutLink> 
               <Link>KIDS</Link>
               <Link border={'1px solid white'} p={'5px'}>SS'M</Link>
               <Link>LAST CHANCE</Link>

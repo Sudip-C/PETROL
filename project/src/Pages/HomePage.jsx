@@ -3,6 +3,7 @@ import Carousals from '../component/carousal'
 import MySlider from '../component/slider'
 import "../CSS/Home.css"
 import { data1, data2 } from '../shortApi/api1'
+import { Link } from 'react-router-dom'
 
 const banner=[
   "https://diesel.gumlet.io/banner/167825364411.webp?compress=true&q=70",
@@ -23,7 +24,7 @@ function HomePage() {
     <button>SHOP NOW</button>
   </div>
   <div className='box-2'>
-<MySlider props={data1} />
+<Link to="/womensection"><MySlider props={data1} /></Link>
   </div>
 </div>
 <div className='car-2'>
@@ -38,7 +39,7 @@ function HomePage() {
     <button>SHOP NOW</button>
   </div>
   <div className='Box-2'>
-<MySlider props={data1} />
+  <Link to="/womensection"><MySlider props={data1} /></Link>
   </div>
 </div>
 <div className='cards'>

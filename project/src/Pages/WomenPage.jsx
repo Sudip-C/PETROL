@@ -7,7 +7,7 @@ function WomenPage() {
   return (
     <DIV>
       <h1>WOMAN</h1>
-      <div className='main'>
+      <div className='Main-body'>
       <SidebarWomen/>
       <WomanProductList/>
       </div>
@@ -20,7 +20,7 @@ export default WomenPage
 const DIV=styled.div`
     padding: 20px;
 
-  .main{
+  .Main-body{
     margin-top: 20px;
     justify-content: space-around;
     display: flex;
