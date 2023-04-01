@@ -13,6 +13,7 @@ import SingleProductPage from '../Pages/SingleProductPage'
 import WishlistPage from '../Pages/WishlistPage'
 import WomenPage from '../Pages/WomenPage'
 import Temp from '../tempo/Temp'
+import ProductPage from '../Pages/ProductPage'
 
 function AllRoutes() {
   return (
@@ -31,6 +32,7 @@ function AllRoutes() {
         <Route path="/product/:id" element={<SingleProductPage/>}/>
         <Route path="/addProduct/" element={<AddProductPage/>}/>
         <Route path='/product/:id/edit' element={<EditProductPage/>}/>
+        <Route path='/product' element={<ProductPage />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
         </Routes>
     </div>

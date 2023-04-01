@@ -7,10 +7,17 @@ import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTri
 import { HamburgerIcon, CloseIcon, SearchIcon,ChevronDownIcon } from '@chakra-ui/icons';
 import { Link as RoutLink } from 'react-router-dom'
 import { NAV_ITEMS } from "./NavComponent/DropdownItem";
+import { useSelector } from "react-redux";
+
 
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
+  let localData=useSelector(store=>store.cartReducer.cartData)
+  let cartCount=0;
+  localData.forEach(el=>{
+    cartCount++
+  })
 
   return (
     <Box position={'sticky'} w='100%' zIndex={'999'} >
@@ -40,11 +47,11 @@ export default function Navbar() {
           {/* right section  */}
           <Flex direction={'row'} mr={{base:'0px',md:'5px',lg:'30px'}} border={{base:'none', md:'1px solid white'}} spacing={1} alignItems={'center'} >
             <IconContext.Provider value={{ size: "20px" }} >
-              <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <VscAccount color="white" /></Box>
-              <RoutLink to='/product/:id'><Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box></RoutLink>
-              <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box>
-              <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHeart color="white" /></Box>
-              <RoutLink to='/cart'><Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHandbag color="white" /></Box></RoutLink>
+             <RoutLink to='/account'> <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <VscAccount color="white" /></Box></RoutLink>
+              <RoutLink to='/search'><Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box></RoutLink>
+             <RoutLink to='/temp'>  <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box></RoutLink>
+              <RoutLink to='/whishlist'><Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <BsHeart color="white" /></Box></RoutLink>
+              <RoutLink to='/cart'><Flex boxSizing="border-box" direction={'row'} border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'9.7px'}}> <BsHandbag color="white" /><Text color={'white'} >{cartCount}</Text></Flex></RoutLink>
             </IconContext.Provider>
           </Flex>
         </Flex>
@@ -65,20 +72,22 @@ const DesktopNav = () => {
     <Stack direction={'row'} spacing={4} w="100%">
 
       <Box w="100%">
-        <Popover trigger={'hover'} placement={'bottom-start'} w="100%">
+    
+          <Popover trigger={'hover'} placement={'bottom-start'} w="100%">
           <PopoverTrigger w="100%">
             <Flex p={2} color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder" direction={'row'} gap={6} alignItems={'center'}>
-              <Link>MAN</Link>
-              <Link>WOMAN</Link>
+              <RoutLink to="/temp"><Link>MAN</Link></RoutLink>
+              <RoutLink to='/product'><Link>WOMAN</Link></RoutLink>
               <Link>KIDS</Link>
               <Link border={'1px solid white'} p={'5px'}>SS'M</Link>
               <Link>LAST CHANCE</Link>
             </Flex>
           </PopoverTrigger>
           {/* <PopoverContent w={'100vw'}>
-           <Box w={'100vw'} h={'400px'} bg="blackAlpha.600"></Box>
+           <Box w={'100vw'} h={'70px'} bg="blackAlpha.600"></Box>
           </PopoverContent> */}
         </Popover>
+     
       </Box>
 
     </Stack>
