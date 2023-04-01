@@ -8,7 +8,7 @@ const CartItem = (props) => {
     <Flex direction={{ base: 'column', md: 'row', }} justify="space-between" align="center" boxShadow={'rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px'} pb={'10px'} gap={{ base: 5, md: 1 }} >
 
       {/* left part of product item  */}
-      <Flex direction="row" gap="5" width={{ base: '100%', md: '50%' }} alignItems={'center'}>
+      <Flex direction="row" gap="5" width={{ base: '100%', md: '50%' }} alignItems={'center'} >
         <Image rounded="lg" width="90px" h={'110px'} src={image[0]} alt={title} draggable="false" loading="lazy"
           bg={'gray.500'} />
         <Box pt="4">
@@ -32,11 +32,11 @@ const CartItem = (props) => {
       <Flex width={{ base: '100%', md: '50%' }} ml={'20px'}>
         <Flex w={'50%'} justify={'space-between'} alignItems={'center'}>
           <Tooltip hasArrow label='minimum quantity'   >
-            <Button bg={'gray.500'} colorScheme={'white'} borderRadius={'none'} >-</Button>
+            <Button bg={'gray.500'} colorScheme={'white'} borderRadius={'none'}>-</Button>
           </Tooltip>
           <Text p={'5px'}>1</Text>
           <Tooltip hasArrow label='maximum quantity'  >
-            <Button bg={'blackAlpha.900'} colorScheme={'white'} borderRadius={'none'} >+</Button>
+            <Button bg={'blackAlpha.900'} colorScheme={'white'} borderRadius={'none'}>+</Button>
           </Tooltip>
           <Button variant={'unstyled'} onClick={()=>del(id)}> <DeleteIcon boxSize={'5'} /></Button>
         </Flex>

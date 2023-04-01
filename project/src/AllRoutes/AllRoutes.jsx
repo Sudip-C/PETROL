@@ -5,6 +5,10 @@ import KidPage from '../Pages/KidPage'
 import AdminPage from '../Pages/AdminPage'
 import MenPage from '../Pages/MenPage'
 import WomenPage from '../Pages/WomenPage'
+
+import Temp from '../tempo/Temp'
+import ProductPage from '../Pages/ProductPage'
+
 import WishlistPage from '../Pages/WishlistPage'
 import SingleProductPage from '../Pages/SingleProductPage'
 import AddProductPage from '../Pages/AddProductPage'
@@ -18,6 +22,7 @@ import MyOrders from '../Pages/Myorders'
 import CartPage from "../Pages/CartPage"
 import Temp from "../tempo/Temp"
 import CheckoutPage from '../Pages/CheckoutPage'
+
 
 
 
@@ -43,6 +48,7 @@ function AllRoutes() {
         <Route path="/product/:id" element={<SingleProductPage/>}/>
         <Route path="/addProduct" element={<AddProductPage/>}/>
         <Route path='/product/:id/edit' element={<EditProductPage/>}/>
+        <Route path='/product' element={<ProductPage />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
         </Routes>
     </div>
