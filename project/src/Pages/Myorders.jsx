@@ -9,7 +9,7 @@ function MyOrders() {
     <div className='container'>
     <div className="mainbody">
       <h1>My Account</h1>
-      <div className='box'>
+      <div className='Account-box'>
      <Link to="/account"><div > Account Dashboard</div></Link> 
      <Link to="/addressbook"> <div  >My Address Book</div></Link>
      <Link to="/myorders"><div >My Orders</div></Link>

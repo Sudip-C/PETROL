@@ -24,7 +24,7 @@ function HomePage() {
     <button>SHOP NOW</button>
   </div>
   <div className='box-2'>
-<Link to="/womensection"><MySlider props={data1} /></Link>
+<Link to="/product"><MySlider props={data1} /></Link>
   </div>
 </div>
 <div className='car-2'>
@@ -39,7 +39,7 @@ function HomePage() {
     <button>SHOP NOW</button>
   </div>
   <div className='Box-2'>
-  <Link to="/womensection"><MySlider props={data1} /></Link>
+  <Link to="/product"><MySlider props={data1} /></Link>
   </div>
 </div>
 <div className='cards'>

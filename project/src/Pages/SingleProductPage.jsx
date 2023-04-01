@@ -4,26 +4,36 @@ import Carousals from '../component/carousal'
 import { TfiHeart} from "react-icons/tfi";
 import {  useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 function SingleProductPage() {
 
 
   const {id}=useParams()
-
+// console.log(+id)
   const[Singledata,setSingleData]=useState([])
 
   let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
   let wishlist=JSON.parse(localStorage.getItem("addToWishlist"))||[]
 
   
-  const {women}=useSelector(store=>store.womenReducer)
+  // const {women}=useSelector(store=>store.womenReducer)
+  const {Menproduct}=useSelector(store=>store.productReducer)
+console.log(Menproduct)
+ 
+
+
+// const single=(id)=>{
+//   axios.get(`https://waiting-brief-sort.glitch.me/woman/?id=${id}`)
+//   .then((res)=>setSingleData(res.data))
+// }
 
   useEffect(()=>{
-    let single=women.find((el)=>el.id===id)
+    let single=Menproduct.find((el)=>el.id===+id)
     setSingleData(single)
+ 
   },[])
-
-console.log(Singledata)
-
+ 
+console.log(Singledata.title)
 
 let data=  {
     
@@ -36,7 +46,7 @@ let data=  {
     "price": 22399,
     "category": "jeans",
     "gender":"woman",
-    "id": "1"
+    "id": 1
    
    }
 

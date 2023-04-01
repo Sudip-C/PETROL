@@ -6,7 +6,7 @@ import {reducer as cartReducer} from './cartReducer/reducer'
 import thunk from "redux-thunk"
 
 const rootReducer=combineReducers({
-    productReducer,cartReducer, womenReducer
+    productReducer,cartReducer, womenReducer})
 
 
 

@@ -16,22 +16,22 @@ const {Menproduct,Womenproduct}=useSelector(store=>store.productReducer )
 // const allData=[...Menproduct,...Womenproduct]
 // console.log(allData)
 
-let obj={
-  params:{
-    _limit:12,
-    _page:page
-  }
-}
+// let obj={
+//   params:{
+//     _limit:12,
+//     _page:page
+//   }
+// }
 const handleDelete=(id)=>{
   axios.delete(`https://waiting-brief-sort.glitch.me/woman/${id}`)
-  .then(()=>dispatch(getMenData(obj)))
+  .then(()=>dispatch(getMenData))
 }
 
 
 
 useEffect(()=>{
-  dispatch(getMenData(obj))
-  dispatch(getWomenData)
+  dispatch(getMenData)
+  // dispatch(getWomenData)
 },[page])
 
 

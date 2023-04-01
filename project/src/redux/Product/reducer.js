@@ -6,7 +6,7 @@ const initialState={
     isLoading:false,
     isError:false,
     Menproduct:[],
-    Womenproduct:[]
+   
 
 }
 

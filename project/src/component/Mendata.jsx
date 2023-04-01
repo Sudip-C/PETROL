@@ -2,11 +2,11 @@ import { Box, Grid, Image, Text ,Stack, Flex,  } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
-import { getProduct } from '../../redux/WomenProduct/action'
+import { getMenData } from '../redux/Product/action'
 
-const ProductData = () => {
+const MenData = () => {
   const dispatch=useDispatch()
-  const {women}=useSelector((store)=>store.womenReducer)
+  const {Menproduct}=useSelector((store)=>store.productReducer)
   const [searchParams]=useSearchParams()
   const location=useLocation()
   let obj={
@@ -18,12 +18,12 @@ const ProductData = () => {
  }
 
   useEffect(()=>{
-      dispatch(getProduct(obj))
+      dispatch(getMenData(obj))
   },[location.search])
   return (
    
     <Grid templateColumns={'repeat(4,1fr)'} minH={'600px'} gap="20px">
-          {women.length>0&&women.map(el=>(
+          {Menproduct.length>0&&Menproduct.map(el=>(
             <Link to={`/product/${el.id}`} key={el.id} > 
             <Stack direction="column" spacing="0px">
                 <Image src={el.image} w='100%' h="400px"  bg="#F9F2F6"  />
@@ -42,4 +42,4 @@ const ProductData = () => {
   )
 }
 
-export default ProductData
+export default MenData
