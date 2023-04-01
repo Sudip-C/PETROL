@@ -23,10 +23,7 @@ let data=
    
    }
 
-  //  const handleAddToCart=()=>{
-  //   arr.push(data)
-  //   localStorage.setItem("'addToCart",JSON.stringify(data))
-  // }
+ 
 
   return (
     <div className='main'>

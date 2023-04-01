@@ -43,9 +43,7 @@ export default function Navbar() {
             <IconContext.Provider value={{ size: "20px" }} >
 
               <RoutLink to={isAuthenticated?"/account":"/login"}><Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} > <VscAccount color="white" /></Box></RoutLink>
-              <Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box>
 
-              <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}}> <VscAccount color="white" /></Box>
               <Box border={{base:'none', md:'1px solid white'}} p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box>
 
               <Box border={{base:'none', md:'1px solid white'}}  p={{base:'10px',md:'12px'}} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box>

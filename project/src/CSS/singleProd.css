@@ -2,10 +2,12 @@
     width: 95%;
     margin: auto;
     margin-bottom: 25px;
-    display: flex;
-    justify-content: space-around;
-}
+   display: flex;
+   flex-direction: row;
+    justify-content: space-around;}
+
 .picture{
+   
     width: 60%;
 }
 .details{
