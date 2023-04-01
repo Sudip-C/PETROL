@@ -68,7 +68,7 @@ function SidebarWomen() {
 export default SidebarWomen
 
 const DIV=styled.div`
-    width: 15%;
+    width: 100%;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 

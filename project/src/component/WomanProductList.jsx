@@ -32,8 +32,8 @@ export default function WomanProductList() {
 }
 
 const DIV=styled.div`
-    width: 80%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 10px; */
 `
