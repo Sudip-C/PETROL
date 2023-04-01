@@ -44,17 +44,17 @@
     font-weight: 700;
     margin-bottom: 40px;
 }
-.mainbody .box{
+.mainbody .Account-box{
     width: 100%;
     
 }
-.box div{
+.Account-box div{
     width: 80%;
     box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
     padding: 10px;
     font-weight: 600;
 }
-.box div:hover{
+.Account-box div:hover{
     background-color: rgb(210, 209, 209);
     font-weight: 700;
 }
@@ -133,13 +133,13 @@
     .Details{
         width: 100%;
     }
-    .mainbody .box{
+    .mainbody .Account-box{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: left;
     }
-    .box div{
+    .Account-box div{
         width: 100%;
        
         border: .5px solid rgb(167, 165, 165);
@@ -151,7 +151,7 @@
         font-weight: 700;
         margin-bottom: 20px;
     }
-    .box div:hover{
+    .Account-box div:hover{
         background-color: rgb(210, 209, 209);
         font-weight: 700;
     }
@@ -242,13 +242,13 @@
         height: 50px;
         margin: 30px;
     }
-    .mainbody .box{
+    .mainbody .Account-box{
         width: 100%;
         display: flex;
         flex-direction: column;
   
     }
-    .box div{
+    .Account-box div{
         width: 100%;
         border: .5px solid rgb(167, 165, 165);
         padding: 10px;
@@ -260,7 +260,7 @@
         font-weight: 700;
         margin-bottom: 20px;
     }
-    .box div:hover{
+    .Account-box div:hover{
         background-color: rgb(210, 209, 209);
         font-weight: 700;
     }

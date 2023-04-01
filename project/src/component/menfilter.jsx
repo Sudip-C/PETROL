@@ -14,7 +14,7 @@ import {
 import { useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-const FilterPage = () => {
+const MenFilterPage = () => {
 
     const [searchParams,setSearchParams]=useSearchParams() 
     const initialOrder=searchParams.get("order")
@@ -33,7 +33,6 @@ const FilterPage = () => {
         }
         setCategory(newCategory)
         }
-
     const handleOrder=(e)=>{
         setOrder(e.target.value)
         }
@@ -50,7 +49,7 @@ const FilterPage = () => {
         <Flex direction="column" gap="30px" pb="30px" pt="20px">
         <Center>
         <Flex direction="column" justify="center">
-            <Heading fontSize="25px">WOMEN</Heading>
+            <Heading fontSize="25px">MEN</Heading>
             <Heading textAlign="center"><ChevronDownIcon /></Heading>
         </Flex>
         </Center>
@@ -333,4 +332,4 @@ const FilterPage = () => {
         </Flex>
     )
 }
-export default FilterPage;
+export default MenFilterPage;
