@@ -14,8 +14,11 @@ import PrivateRoute from './PrivateRoute';
 import Account from '../pages/Account'
 import AddressBook from '../pages/AddressBook'
 import MyOrders from '../pages/Myorders'
-
-
+import {Routes, Route} from"react-router-dom"
+import CartPage from "../pages/CartPage"
+import HomePage from "../pages/HomePage"
+import Temp from "../tempo/Temp"
+import CheckoutPage from "../pages/CheckoutPage"
 
 function AllRoutes() {
   return (
