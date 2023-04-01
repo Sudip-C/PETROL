@@ -55,6 +55,11 @@ export const data1=[
         "title": "MEN'S APPAREL",
         "image": "https://diesel.gumlet.io/banner/1676539421SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_FTW_%20PROTOTYPE%20CR_1_1_SS23DROP2-25_2.webp?compress=true&q=70",
         
+    }, 
+     {
+        "title": "MEN' ACCESSORIES",
+        "image": "https://diesel.gumlet.io/banner/1676539197SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_REHAB%20DENIM_1_1_SS23DROP2-22_2.webp?compress=true&q=70",
+        
     },
     {
         "title": "WOMEN JEANS",
@@ -71,4 +76,5 @@ export const data1=[
         "image": "https://diesel.gumlet.io/banner/1676539197SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_REHAB%20DENIM_1_1_SS23DROP2-22_2.webp?compress=true&q=70",
         
     }
+
   ]

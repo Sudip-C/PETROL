@@ -2,12 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 export default function WomenProductCard({image, title, price, category}) {
-    console.log(title)
+
+   
+ 
+   
   return (
     <DIV>
         <img src={image[0]} alt={title} />
         <p className='price'>₹ {price} <span>₹ {price+1000}</span></p>
         <h3>{title.slice(1,23)}...</h3>
+
         <p>{category}</p>
     </DIV>
   )
