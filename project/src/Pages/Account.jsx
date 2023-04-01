@@ -27,8 +27,8 @@ function Account() {
 <div>
   <h1>MY Profile </h1>
   <h1>Profile Information</h1>
-  <h4>NAME:  {user?.name}</h4>
-  <h4>E-MAIL:  {user?.email}</h4>
+  <h4><b>NAME:</b>  {user?.name}</h4>
+  <h4><b>E-MAIL:</b>  {user?.email}</h4>
   <button>Edit my profile</button>
 </div>
 </div>

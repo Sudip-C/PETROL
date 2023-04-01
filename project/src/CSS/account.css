@@ -9,11 +9,35 @@
 }
 
 
-.mainbodybody{
+.mainbody{
     display: flex;
     flex-direction: column;
     width:30%;
     
+}
+.UserAddress{
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.UserAddress>:nth-child(1){
+    font-size:30px;
+    font-weight:700
+}
+.UserAddress>:nth-child(2){
+    font-size:15px;
+    display:flex;
+    flex-direction:column;
+    gap:10px
+}
+.UserAddress button{
+    width:20%;
+    background-color:black;
+    color:white;
+    padding:10px
 }
 .mainbody h1{
     font-size: 35px;
@@ -38,7 +62,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 60%;
+    width: 70%;
 }
 .Details h1{
     font-size: 25px;
@@ -95,11 +119,11 @@
         display: flex;
         flex-direction: column;
         justify-content:space-between;
-        align-items: center;
+        align-items: first baseline;
         margin-top: 30px;
         margin-bottom: 150px;
     }
-    .mainbodybody{
+    .mainbody{
         display: flex;
         flex-direction: column;
         width:100%;
@@ -109,7 +133,7 @@
     .Details{
         width: 100%;
     }
-    .mainbodybody .box{
+    .mainbody .box{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -122,7 +146,7 @@
         padding: 10px;
         font-weight: 600;
     }
-    .mainbodybody h1{
+    .mainbody h1{
         font-size: 30px;
         font-weight: 700;
         margin-bottom: 20px;
@@ -130,6 +154,17 @@
     .box div:hover{
         background-color: rgb(210, 209, 209);
         font-weight: 700;
+    }
+    .UserAddress button{
+       width: 50%;
+    }
+    .UserAddress>:nth-child(2){
+        font-size:15px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        border:1px solid black;
+        padding: 10px;
     }
 }
 @media screen and (min-width:200px) and (max-width:699px){
@@ -143,18 +178,71 @@
         margin-top: 20px;
         margin-bottom: 150px;
     }
-    .mainbodybody{
+    .mainbody{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         width:100%;
+        margin-bottom: 20px;
     }
     .Details{
-        border:1px solid rgb(8, 1, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
         width: 100%;
+        margin-top: 30px;
     }
-    .mainbodybody .box{
+    .Details h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .Details h4{
+        font-weight: 600;
+    }
+    .profile{
+        display: flex;
+        flex-direction: row;
+       margin-bottom: 20px;
+    }
+    .profile button{
+        padding: 8px;
+        border: 1px solid black;
+        color: black;
+        margin-top: 10px;
+    }
+    .profile button:hover{
+        background-color: black;
+        color: white;
+    }
+    .profile>:nth-child(1){
+        width: 50px;
+        height: 50px;
+        margin: 30px;
+    }
+    .address{
+        display: flex;
+        flex-direction: row;
+        justify-content:left;
+    
+    }
+    .address button{
+        padding: 8px;
+        border: 1px solid black;
+        color: black;
+        margin-top: 10px;   
+    }
+    .address button:hover{
+        background-color: black;
+        color: white;
+    }
+    .address>:nth-child(1){
+        width: 50px;
+        height: 50px;
+        margin: 30px;
+    }
+    .mainbody .box{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -166,7 +254,7 @@
         padding: 10px;
         font-weight: 500;
     }
-    .mainbodybody h1{
+    .mainbody h1{
       
         font-size: 30px;
         font-weight: 700;
@@ -175,5 +263,32 @@
     .box div:hover{
         background-color: rgb(210, 209, 209);
         font-weight: 700;
+    }
+    .UserAddress{
+        width: 70%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: first baseline;
+        text-align: left;
+    }
+    .UserAddress>:nth-child(1){
+        font-size:25px;
+        font-weight:700
+    }
+    .UserAddress>:nth-child(2){
+        font-size:15px;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        border:1px solid black;
+        padding: 10px;
+    }
+    .UserAddress button{
+        width:80%;
+        background-color:black;
+        color:white;
+        padding:10px
     }
 }
