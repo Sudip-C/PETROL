@@ -24,6 +24,7 @@ export default function Navbar() {
     cartCount++
   })
 
+
   return (
     <Box position={'fixed'} w='100%' zIndex={'999'} >
       <Flex bg={'#FF0000'} minH={'70px'}   >
@@ -53,11 +54,13 @@ export default function Navbar() {
           <Flex direction={'row'} mr={{ base: '0px', md: '5px', lg: '30px' }} border={{ base: 'none', md: '1px solid white' }} spacing={1} alignItems={'center'} >
             <IconContext.Provider value={{ size: "20px" }} >
 
+
               <RoutLink to={isAuthenticated ? "/account" : "/login"}> <Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }}> <VscAccount color="white" /></Box></RoutLink>
               <RoutLink to='/search'><Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box></RoutLink>
               <RoutLink to='/temp'>  <Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box></RoutLink>
               <RoutLink to='/whishlist'><Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }}> <BsHeart color="white" /></Box></RoutLink>
               <RoutLink to='/cart'><Flex boxSizing="border-box" direction={'row'} border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '9.7px' }}> <BsHandbag color="white" /><Text color={'white'} >{cartCount}</Text></Flex></RoutLink>
+              
             </IconContext.Provider>
           </Flex>
         </Flex>
@@ -82,6 +85,7 @@ const DesktopNav = () => {
         <Popover trigger={'hover'} placement={'bottom-start'} w="100%">
           <PopoverTrigger w="100%">
             <Flex p={2} color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder" direction={'row'} gap={6} alignItems={'center'}>
+
 
               <RoutLink to="/product"><Link>MAN</Link></RoutLink>
               <RoutLink to="/womensection" ><Link>WOMAN</Link></RoutLink>
@@ -164,4 +168,4 @@ const MobileNavItem = ({ label, children, href }) => {
       </Collapse>
     </Stack>
   );
-}
+

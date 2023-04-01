@@ -17,7 +17,6 @@ import Account from '../Pages/Account'
 import AddressBook from '../Pages/AddressBook'
 import MyOrders from '../Pages/Myorders'
 import CartPage from "../Pages/CartPage"
-import Temp from "../tempo/Temp"
 import CheckoutPage from '../Pages/CheckoutPage'
 
 
@@ -36,7 +35,6 @@ function AllRoutes() {
         <Route path="/" element={<HomePage/>}  ></Route>
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
-        <Route path='/temp' element={<Temp />} />
         <Route path='/kidsection' element={<KidPage/>}/>
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/mensection' element={<MenPage/>}/>
