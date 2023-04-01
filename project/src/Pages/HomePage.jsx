@@ -13,7 +13,7 @@ const banner=[
 
 function HomePage() {
   return (
-    <div>
+    <div style={{paddingTop:"70px"}}>
 <Carousals pictures={banner} height={"700px"}/>
 <div className='top-home'>
   <div className='box-1'>

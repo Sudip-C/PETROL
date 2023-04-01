@@ -5,10 +5,7 @@ import KidPage from '../Pages/KidPage'
 import AdminPage from '../Pages/AdminPage'
 import MenPage from '../Pages/MenPage'
 import WomenPage from '../Pages/WomenPage'
-
-import Temp from '../tempo/Temp'
 import ProductPage from '../Pages/ProductPage'
-
 import WishlistPage from '../Pages/WishlistPage'
 import SingleProductPage from '../Pages/SingleProductPage'
 import AddProductPage from '../Pages/AddProductPage'

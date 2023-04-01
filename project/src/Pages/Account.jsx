@@ -7,7 +7,7 @@ function Account() {
   const { logout,user } = useAuth0()
 
   return (
-    <div className='container'>
+    <div className='container' style={{marginTop:'0px'}}>
     <div className="mainbody">
       <h1>My Account</h1>
       <div className='box'>
