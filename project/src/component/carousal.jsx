@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 // Settings for the slider
 const settings = {
   dots: true,
-  arrows: false,
+  arrows: true,
   fade: true,
   infinite: true,
   autoplay: true,
@@ -45,7 +45,7 @@ return(
     />
    
     <Slider {...settings} >
-      {pictures.map((url, index) => (
+      {pictures?.map((url, index) => (
         <Box
           key={index}
           height={'2xl'}

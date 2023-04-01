@@ -7,9 +7,9 @@ function AddressBook() {
 
   return (
     <div className='container'>
-    <div className="main">
+    <div className="mainbody">
       <h1>My Account</h1>
-      <div className='box'>
+      <div className='Account-box'>
      <Link to="/account"><div > Account Dashboard</div></Link> 
      <Link to="/addressbook"> <div  >My Address Book</div></Link>
      <Link to="/myorders"><div >My Orders</div></Link>
@@ -17,8 +17,18 @@ function AddressBook() {
 
       </div>
     </div>
-    <div className='details'>
-my name is sudip
+    <div className='UserAddress'>
+<div >
+  <h2>Shipping Address</h2>
+</div>
+<div >
+ <h3><b>Name:</b>Sudip Chowdhury</h3>
+ <h3><b>Mobile:</b>6291847283</h3>
+ <h3><b>Address:</b>Kolkata,West Bengal</h3>
+ <h3><b>Address type:</b>Home</h3>
+</div>
+<button >+ Add new address</button>
+
     </div>
     </div>
   )

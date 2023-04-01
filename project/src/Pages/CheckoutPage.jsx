@@ -5,7 +5,7 @@ import CheckoutProductSummary from '../component/CartComponent/CheckoutProductSu
 
 const CheckoutPage = () => {
     return (
-        <Box>
+        <Box py="70px">
 
             <Stack direction={{ base: 'column',md:'column', lg: 'row', }} align={{ lg: 'flex-start', }}>
 

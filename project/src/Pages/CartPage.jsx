@@ -35,10 +35,11 @@ const CartPage = () => {
   return (
     cartData.length===0 ? <EmptyCart /> :
       <Box
+      minH={'700px'}
         maxW={{ base: '3xl', lg: '7xl', }}
         mx="auto"
         px={{ base: '4', md: '8', lg: '20', }}
-        py={{ base: '2', md: '3', lg: '4', }} >
+       py='80px' >
 
         <Heading fontSize="25px" fontWeight="bold" pb={'15px'} textAlign={'center'}>
           YOUR CART

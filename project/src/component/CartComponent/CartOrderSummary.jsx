@@ -60,7 +60,7 @@ const CartOrderSummary = () => {
       </Button></RoutLink>
       <Flex mt="6" fontWeight="semibold" justify={'center'}>
         <p>or</p>
-        <Link color={mode('blue.500', 'blue.200')}>Continue shopping</Link>
+        <RoutLink to='/'><Link color={mode('blue.500', 'blue.200')}>Continue shopping</Link></RoutLink>
       </Flex>
     </Stack>
   )

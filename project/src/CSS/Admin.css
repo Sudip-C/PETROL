@@ -22,12 +22,19 @@
     padding-left: 10px;
     border-radius: 10px;
 }
-.button-group{
+.Proddetails{
+    width: 100%;
+    text-align: center;
+    
+}
+.buttons{
     display: flex;
     justify-content: center;
     gap: 10px;
     padding:20px
 }
 .pagination{
-    margin: 40px;
+    width: 30%;
+    margin:auto;
+   
 }

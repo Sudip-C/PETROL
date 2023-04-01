@@ -1,24 +1,26 @@
 import React from 'react'
+import {Route,Routes} from "react-router-dom"
+import HomePage from "../Pages/HomePage"
+import KidPage from '../Pages/KidPage'
+import AdminPage from '../Pages/AdminPage'
+import MenPage from '../Pages/MenPage'
+import WomenPage from '../Pages/WomenPage'
+import ProductPage from '../Pages/ProductPage'
+import WishlistPage from '../Pages/WishlistPage'
+import SingleProductPage from '../Pages/SingleProductPage'
+import AddProductPage from '../Pages/AddProductPage'
+import EditProductPage from '../Pages/EditProductPage'
+import AdminLogin from '../Pages/AdminLogin'
+import Login from "../Pages/Login"
+import PrivateRoute from '../AllRoutes/PrivateRoute';
+import Account from '../Pages/Account'
+import AddressBook from '../Pages/AddressBook'
+import MyOrders from '../Pages/Myorders'
+import CartPage from "../Pages/CartPage"
+import CheckoutPage from '../Pages/CheckoutPage'
 
-import KidPage from '../pages/KidPage'
-import AdminPage from '../pages/AdminPage'
-import MenPage from '../pages/MenPage'
-import WomenPage from '../pages/WomenPage'
-import WishlistPage from '../pages/WishlistPage'
-import SingleProductPage from '../pages/SingleProductPage'
-import AddProductPage from '../pages/AddProductPage'
-import EditProductPage from '../pages/EditProductPage'
-import AdminLogin from '../pages/AdminLogin'
-import Login from "../pages/Login"
-import PrivateRoute from './PrivateRoute';
-import Account from '../pages/Account'
-import AddressBook from '../pages/AddressBook'
-import MyOrders from '../pages/Myorders'
-import {Routes, Route} from"react-router-dom"
-import CartPage from "../pages/CartPage"
-import HomePage from "../pages/HomePage"
-import Temp from "../tempo/Temp"
-import CheckoutPage from "../pages/CheckoutPage"
+
+
 
 function AllRoutes() {
   return (
@@ -30,11 +32,13 @@ function AllRoutes() {
         <Route path="myorders" element={<MyOrders/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path='/cart' element={<PrivateRoute><CartPage/></PrivateRoute>} />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 65fa7e045bbf4a4675d9407dd9f7cc1d6a13841d
         <Route path="/" element={<HomePage/>}  ></Route>
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
-        <Route path='/temp' element={<Temp />} />
         <Route path='/kidsection' element={<KidPage/>}/>
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/mensection' element={<MenPage/>}/>
@@ -43,6 +47,7 @@ function AllRoutes() {
         <Route path="/product/:id" element={<SingleProductPage/>}/>
         <Route path="/addProduct" element={<AddProductPage/>}/>
         <Route path='/product/:id/edit' element={<EditProductPage/>}/>
+        <Route path='/product' element={<ProductPage />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
         </Routes>
     </div>

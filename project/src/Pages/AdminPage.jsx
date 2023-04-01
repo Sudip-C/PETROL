@@ -16,22 +16,22 @@ const {Menproduct,Womenproduct}=useSelector(store=>store.productReducer )
 // const allData=[...Menproduct,...Womenproduct]
 // console.log(allData)
 
-let obj={
-  params:{
-    _limit:12,
-    _page:page
-  }
-}
+// let obj={
+//   params:{
+//     _limit:12,
+//     _page:page
+//   }
+// }
 const handleDelete=(id)=>{
   axios.delete(`https://waiting-brief-sort.glitch.me/woman/${id}`)
-  .then(()=>dispatch(getMenData(obj)))
+  .then(()=>dispatch(getMenData))
 }
 
 
 
 useEffect(()=>{
-  dispatch(getMenData(obj))
-  dispatch(getWomenData)
+  dispatch(getMenData)
+  // dispatch(getWomenData)
 },[page])
 
 
@@ -43,11 +43,11 @@ useEffect(()=>{
         return <div key={el.id} className="prod-card" >
             <img src={el.image[0]} width="80%" alt={el.category}/>
               <div className='all'>
-            <div className='details'>
-            <h3>{el.title}</h3>
+            <div className='Proddetails'>
+            <h3>{el.title.slice(2,35)}</h3>
             <p>MRP :₹{el.price}</p>
             </div>
-            <div className='button-group'>
+            <div className='buttons'>
             <Button colorScheme='green'size='sm'>Edit</Button>
             <Button colorScheme='red'size='sm' onClick={()=>handleDelete(el.id)} >Delete</Button>
             </div>

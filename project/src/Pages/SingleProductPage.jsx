@@ -1,43 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../CSS/singleProd.css"
 import Carousals from '../component/carousal'
 import { TfiHeart} from "react-icons/tfi";
+import {  useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 function SingleProductPage() {
-
+  const[Singledata,setSingleData]=useState('')
+  const {id}=useParams()
+  let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
+  let wishlist=JSON.parse(localStorage.getItem("addToWishlist"))||[]
 
   
 
-let data=
-  {
-    
-    "title": "1956-SP STRAIGHT FIT WOMAN BLUE MEDIUM WASHED JEANS",
-    "image": ["https://diesel.gumlet.io/product/410291797001/665/410291797005_1.jpg?compress=true&q=70",
-    "https://diesel.gumlet.io/product/410291797001/665/410291797005_2.jpg?compress=true&q=70",
-  "https://diesel.gumlet.io/product/410291797001/665/410291797005_4.jpg?compress=true&q=70"],
-    "description": "Regular style with a high waist and straight leg. Channeling a rock-n-roll vibe, its authentic influences include a straight-cut leg and button fly. It's crafted from inside-out fabric and features side bands along the length of the leg.",
-    "color": "blue",
-    "price": 22399,
-    "category": "jeans",
-    "gender":"woman",
-    "id": "1"
-   
+let getData=()=>{
+  axios.get(`https://waiting-brief-sort.glitch.me/product/${id}`)
+  .then(res=>setSingleData(res.data))
+}
+
+  useEffect(()=>{
+     getData()
+  },[])
+
+  useEffect(()=>{
+    let single=Menproduct.find((el)=>el.id===+id)
+    setSingleData(single)
+ 
+  },[])
+
+   const handleAddToCart=()=>{
+    arr.push(Singledata)
+    localStorage.setItem("addToCart",JSON.stringify(arr))
+    alert("Product added to cart")
+   }
+ 
+   const addToWishlist=()=>{
+    wishlist.push(data)
+    localStorage.setItem("addToWishlist",JSON.stringify(wishlist))
+    alert("Product added to wishlist")
    }
 
-  //  const handleAddToCart=()=>{
-  //   arr.push(data)
-  //   localStorage.setItem("'addToCart",JSON.stringify(data))
-  // }
-
   return (
-    <div className='main'>
+    <div className='main' style={{paddingTop:'70px',minHeight:'900px'}}>
     <div className='picture'>
-<Carousals pictures={data.image} height={"700px"}/>
+<Carousals pictures={Singledata?.image} height={"700px"}/>
     </div>
 <div className='details'>
-<h1>{data.title}</h1>
-<h2>MRP ₹{data.price}</h2>
+<h1>{Singledata.title}</h1>
+<h2>MRP ₹{Singledata?.price}</h2>
 <p>Price inclusive of all taxes</p>
-<h3>COLOR: {data.color.toUpperCase()}</h3>
+<h3>COLOR: {Singledata?.color}</h3>
+<div style={{borderRadius:"50%",backgroundColor:Singledata?.color,height:"30px",width:"30px"}}></div>
 <h3>CHOOSE SIZE</h3>
 <div className='button-group'>
   <button>28</button>
@@ -56,11 +69,11 @@ let data=
   <div>Check delivery</div>
 </div>
 <div className='addtocart'>
-  <button>ADD TO CART</button>
-<TfiHeart />
+  <button onClick={handleAddToCart} >ADD TO CART</button>
+<TfiHeart onClick={addToWishlist}/>
 </div>
 <h3>DESCRIPTION</h3>
-<p>{data.description}</p>
+<p>{Singledata?.description}</p>
 </div>
     </div>
   )

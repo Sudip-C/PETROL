@@ -3,7 +3,7 @@ import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_WOMENDATA_SUC
 
 export const getMenData=(obj)=>(dispatch)=>{
     dispatch({type:GET_DATA_REQUEST})
-    axios.get(`https://waiting-brief-sort.glitch.me/woman`,obj)
+    axios.get(`https://waiting-brief-sort.glitch.me/mens`,obj)
     .then((res)=>dispatch({type:GET_DATA_SUCCESS,payload:res.data}))
     .catch(()=>dispatch({type:GET_DATA_FAILURE}))
 }
