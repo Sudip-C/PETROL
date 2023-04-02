@@ -9,7 +9,6 @@ import {
     MenuGroup,
     MenuOptionGroup,
     MenuDivider,
-    Select
 } from '@chakra-ui/react'
 import { useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
