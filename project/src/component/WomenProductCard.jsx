@@ -8,7 +8,7 @@ export default function WomenProductCard({item, index, handleSlice}) {
 
 
     let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
-    let wishlist=JSON.parse(localStorage.getItem("addToWishlist"))||[]
+    
     console.log(item)
 
     const handleAddToCart=()=>{
@@ -23,10 +23,10 @@ export default function WomenProductCard({item, index, handleSlice}) {
   return (
     <DIV>
 
-        <img src={image[0]} alt={title} />
-        <p className='price'>₹ {price} </p>
-        <h3>{title.slice(0,23)}...</h3>
-        <p>{category}</p>
+        <img src={item.image[0]} alt={item.title} />
+        <p className='price'>₹ {item.price} </p>
+        <h3>{item.title.slice(0,23)}...</h3>
+        <p>{item.category}</p>
         <Select  placeholder='SELECT COLOR' w="100%" _focus={{outline:'none',border:'none'}} border={'none'} ouline='none'>
                 <option  value='desc'>Price High To Low</option>
                 <option   value='asc'>Price Low To High</option>
@@ -46,10 +46,7 @@ export default function WomenProductCard({item, index, handleSlice}) {
             <Button bg="white" _hover={{ bg: 'white'}} marginTop={2} marginLeft="72%">X Remove</Button>
 
 
-        <img src={item.image} alt={item.title} />
-        <p className='price'>₹ {item.price} <span>₹ {item.price+1000}</span></p>
-        <h3>{item.title.slice(1,23)}...</h3>
-        <p>{item.category}</p>
+       
         <div>
             <Button onClick={handleAddToCart}>Add to cart</Button>
             <Button onClick={()=>handleSlice(index)}>X Remove</Button>
