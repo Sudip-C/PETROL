@@ -21,6 +21,7 @@ export default function WomenProductCard({item, index, handleSlice}) {
   return (
     <DIV>
 
+
     <img src={item.image[0]} alt={item.title} />
     <p className='price'>₹ {item.price} </p>
     <h3>{item.title.slice(0,23)}...</h3>
@@ -38,11 +39,7 @@ export default function WomenProductCard({item, index, handleSlice}) {
         <br/>
         <Button  onClick={handleAddToCart} borderRadius="none" bg="white" border=".5px solid black"  _hover={{ bg: 'black' ,color:"white"}} w="100%">ADD TO BAG</Button>
         <Button bg="white" onClick={()=>handleSlice(index)} _hover={{ bg: 'white'}} marginTop={2} marginLeft="72%">X Remove</Button>
-
-
-
-</DIV>
-    
+1   
   )
 }
 
