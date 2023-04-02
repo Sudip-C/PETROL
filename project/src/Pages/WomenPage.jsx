@@ -8,14 +8,21 @@ function WomenPage() {
     <DIV>
       <h1>WOMAN</h1>
 
+
+      {/* <div className='Main-body'>
+
       {/* <div className='Main-body'> */}
 
-      <div className='Main-div'>
+
+      <div className='Main-div'> */}
 
       <SidebarWomen/>
       <WomanProductList/>
+
+
       </div>
       
+
     </DIV>
   )
 }

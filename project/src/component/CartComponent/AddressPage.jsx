@@ -11,7 +11,7 @@ const AddressPage = () => {
     let paymentPage=useSelector(store=>store.cartReducer.paymentPage)
 
     return (
-        <Box  pr={{ base: '4', md: '8', lg: '20', }} position={'relative'} zIndex={'999'}>
+        <Box  pr={{ base: '4', md: '8', lg: '20', }} position={'relative'}>
         {changePage ?paymentPage ?<PaymentMethod />:<ShippingPage />:<NewAddressPage />}
         {/* <ShippingPage /> */}
         </Box>

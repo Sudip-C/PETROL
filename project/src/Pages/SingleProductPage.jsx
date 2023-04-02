@@ -4,36 +4,33 @@ import Carousals from '../component/carousal'
 import { TfiHeart} from "react-icons/tfi";
 // import {  useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
+
 function SingleProductPage() {
-
-
+  const[Singledata,setSingleData]=useState('')
   const {id}=useParams()
-// console.log(+id)
-  // const[Singledata,setSingleData]=useState([])
 
   let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
   let wishlist=JSON.parse(localStorage.getItem("addToWishlist"))||[]
 
   
+
   // const {women}=useSelector(store=>store.womenReducer)
 //   const {Menproduct}=useSelector(store=>store.productReducer)
 // console.log(Menproduct)
  
 
 
-// const single=(id)=>{
-//   axios.get(`https://waiting-brief-sort.glitch.me/woman/?id=${id}`)
-//   .then((res)=>setSingleData(res.data))
-// }
+let getData=()=>{
+  axios.get(`https://waiting-brief-sort.glitch.me/product/${id}`)
+  .then(res=>setSingleData(res.data))
+}
 
-  // useEffect(()=>{
-  //   let single=Menproduct.find((el)=>el.id===+id)
-  //   setSingleData(single)
+  useEffect(()=>{
+     getData()
+  },[])
+
  
-  // },[])
- 
-// console.log(Singledata.title)
 
 let data=  {
     
@@ -50,8 +47,11 @@ let data=  {
    
    }
 
+  },[])
+
+
    const handleAddToCart=()=>{
-    arr.push(data)
+    arr.push(Singledata)
     localStorage.setItem("addToCart",JSON.stringify(arr))
     alert("Product added to cart")
    }
@@ -63,16 +63,16 @@ let data=  {
    }
 
   return (
-    <div className='main'>
+    <div className='main' style={{paddingTop:'70px',minHeight:'900px'}}>
     <div className='picture'>
-<Carousals pictures={data?.image} height={"700px"}/>
+<Carousals pictures={Singledata?.image} height={"700px"}/>
     </div>
 <div className='details'>
-<h1>{data?.title}</h1>
-<h2>MRP ₹{data?.price}</h2>
+<h1>{Singledata.title}</h1>
+<h2>MRP ₹{Singledata?.price}</h2>
 <p>Price inclusive of all taxes</p>
-<h3>COLOR: {data?.color.toUpperCase()}</h3>
-<div style={{borderRadius:"50%",backgroundColor:data?.color,height:"30px",width:"30px"}}></div>
+<h3>COLOR: {Singledata?.color}</h3>
+<div style={{borderRadius:"50%",backgroundColor:Singledata?.color,height:"30px",width:"30px"}}></div>
 <h3>CHOOSE SIZE</h3>
 <div className='button-group'>
   <button>28</button>
@@ -95,7 +95,7 @@ let data=  {
 <TfiHeart onClick={addToWishlist}/>
 </div>
 <h3>DESCRIPTION</h3>
-<p>{data?.description}</p>
+<p>{Singledata?.description}</p>
 </div>
     </div>
   )

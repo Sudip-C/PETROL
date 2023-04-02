@@ -3,7 +3,7 @@ import {GET_PRODUCT_FAIL, GET_PRODUCT_REQ, GET_PRODUCT_SUCCESS} from "./actionTy
 const initialState={
     isLoading:false,
     isError:false,
-    women:[]
+    women:{}
 }
 
 export const reducer=(state=initialState,{type,payload})=>{
