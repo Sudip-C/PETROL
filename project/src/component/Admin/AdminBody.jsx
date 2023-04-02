@@ -38,7 +38,7 @@ const AdminBody = () => {
                         <Flex w={'100%'} gap="50px" alignItems={'center'} justify='end'>
                             <Button variant={'unstyled'} bg="red" px='40px'>Delete</Button>
                             <AdminEdit />
-                           
+
                         </Flex>
                     </Flex>
                 </Flex>

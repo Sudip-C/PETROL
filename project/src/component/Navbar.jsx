@@ -3,18 +3,12 @@ import { BsSearch, BsHandbag, BsQuestionCircle, BsHeart } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc"
 import { IconContext } from "react-icons";
 import logo from '../photos/logo.png'
-
-
 import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Image, Icon,  useColorMode, Button} from '@chakra-ui/react';
-
 import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { Navigate, Link as RoutLink, useNavigate, useSearchParams } from 'react-router-dom'
 import { NAV_ITEMS } from "./NavComponent/DropdownItem";
-
 import { useSelector } from "react-redux";
-
 import { useEffect, useState } from "react";
-
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 
@@ -26,7 +20,6 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { sOpen, onToggle } = useDisclosure();
-  const { isAuthenticated } = useAuth0();
   let localData = useSelector(store => store.cartReducer.cartData)
   let cartCount = 0;
   localData.forEach(el => {
@@ -127,15 +120,10 @@ useEffect(()=>{
                 navigate("/product")}} value={"woman"}>WOMAN</Button>
               <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750"onClick={(e)=>{handleGender(e)
                 navigate("/product")}} value={"kids"}>KIDS</Button>
-              <Link border={'1px solid white'} p={'5px'}>SS'M</Link>
-
-          
+              <Link border={'1px solid white'} p={'5px'}>SS'M</Link>          
               <Link>LAST CHANCE</Link>
             </Flex>
           </PopoverTrigger>
-          {/* <PopoverContent w={'100vw'}>
-           <Box w={'100vw'} h={'70px'} bg="blackAlpha.600"></Box>
-          </PopoverContent> */}
         </Popover>
 
       </Box>

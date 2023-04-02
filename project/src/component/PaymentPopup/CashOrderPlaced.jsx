@@ -16,9 +16,8 @@ import {
 
   } from '@chakra-ui/react'
 import React from 'react'
-import NewAddressPage from '../CartComponent/NewAddressPage'
 
-function OnlinePayment() {
+function CashOrderPlaced() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null)
   
@@ -83,4 +82,4 @@ function OnlinePayment() {
     )
   }
 
-  export default OnlinePayment
+  export default CashOrderPlaced
