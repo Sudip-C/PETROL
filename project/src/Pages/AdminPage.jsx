@@ -11,6 +11,7 @@ import AdminNav from '../component/Admin/AdminNav'
 import AdminBody from '../component/Admin/AdminBody'
 
 
+
  export default function AdminPage() {
 const [page,setPage]=useState(1)
 
@@ -24,20 +25,17 @@ const handleDelete=(id)=>{
   .then(()=>dispatch(getAllData))
 }
 
-useEffect(()=>{
-  dispatch(getAllData)
- 
-},[page])
-  
- 
+
+
 
   return (
-    <Box h='100vh' pos="relative" zIndex="1000" bg="white">
-      <HStack w="100%" spacing="0px" h="100vh" >
+
+    <Box  h="100vh" zIndex={'1000'} bgColor={'white'} position={'relative'}>
+      <HStack w="100%"  spacing="0px" h="100vh" >
         <Box w="30%" >
           <AdminSidebar />
         </Box>
-        <Flex direction='column' w="100%" h="100vh" gap="50px" boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px'>
+        <Flex direction='column' overflow={'scroll'} w="100%" h="100%" gap="50px" boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px'>
           <AdminNav />
           <AdminBody />
         </Flex>

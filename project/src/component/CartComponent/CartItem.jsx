@@ -32,7 +32,7 @@ const CartItem = (props) => {
       <Flex width={{ base: '100%', md: '50%' }} ml={'20px'}>
         <Flex w={'50%'} justify={'space-between'} alignItems={'center'}>
           <Tooltip hasArrow label='minimum quantity'   >
-            <Button bg={'gray.500'} colorScheme={'white'} borderRadius={'none'}>-</Button>
+            <Button bg={'gray.500'} colorScheme={'white'}   borderRadius={'none'}>-</Button>
           </Tooltip>
           <Text p={'5px'}>1</Text>
           <Tooltip hasArrow label='maximum quantity'  >

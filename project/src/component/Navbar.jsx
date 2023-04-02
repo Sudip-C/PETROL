@@ -20,6 +20,7 @@ export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { sOpen, onToggle } = useDisclosure();
+
   let localData = useSelector(store => store.cartReducer.cartData)
   let cartCount = 0;
   localData.forEach(el => {
@@ -85,25 +86,6 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
-  const[searchParams,setSearchParams]=useSearchParams()
-
-  const initialgender=searchParams.get("gender")
-const [gender,setGender]=useState(initialgender||"")
-const navigate=useNavigate()
-
-const handleGender=(e)=>{
-  setGender(e.target.value)
-
-}
-
-useEffect(()=>{
-
-  let Obj={
-    gender,
-  }
-  setSearchParams(Obj)
-},[gender])
-
 
   return (
     <Stack direction={'row'} spacing={4} w="100%">
@@ -114,13 +96,16 @@ useEffect(()=>{
           <PopoverTrigger w="100%">
 
             <Flex p={2}  color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder" direction={'row'} gap={6} alignItems={'center'}>
-              <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750" onClick={(e)=>{handleGender(e)
-                 navigate("/product") }}  value={"mens"}>MAN</Button >
-              <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750" onClick={(e)=>{handleGender(e)
-                navigate("/product")}} value={"woman"}>WOMAN</Button>
-              <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750"onClick={(e)=>{handleGender(e)
-                navigate("/product")}} value={"kids"}>KIDS</Button>
-              <Link border={'1px solid white'} p={'5px'}>SS'M</Link>          
+
+              <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750" onClick={()=>{
+                 navigate("/mensection") }}  >MAN</Button >
+              <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750" onClick={()=>{
+                navigate("/product")}} >WOMAN</Button>
+              <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750"onClick={()=>{
+                navigate("/kidsection")}} >KIDS</Button>
+              <Link border={'1px solid white'} p={'5px'}>SS'M</Link>
+
+        
               <Link>LAST CHANCE</Link>
             </Flex>
           </PopoverTrigger>

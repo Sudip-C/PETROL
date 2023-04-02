@@ -3,9 +3,9 @@ import axios from 'axios'
 import React, {useState, useEffect } from 'react'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
 
-const MenData = () => {
+const KidData = () => {
 const [isLoading,setisLoading]=useState(false)
-const[Menproduct,setMenProduct]=useState([])
+const[Kidproduct,setKidProduct]=useState([])
   const [searchParams]=useSearchParams()
   const location=useLocation()
   let obj={
@@ -15,15 +15,15 @@ const[Menproduct,setMenProduct]=useState([])
         _order:searchParams.get("order")
     }
  }
-const getMenData=()=>{
+const getKidData=()=>{
     setisLoading(true)
-axios.get(`https://waiting-brief-sort.glitch.me/product/?gender=mens`,obj)
-.then((res)=>setMenProduct(res.data))
+axios.get(`https://waiting-brief-sort.glitch.me/product/?gender=kids`,obj)
+.then((res)=>setKidProduct(res.data))
 setisLoading(false)
 }
 
   useEffect(()=>{
-    getMenData()
+    getKidData()
   },[location.search])
 
   if(isLoading)return <h1 style={{textAlign:"center", fontSize:"50px" ,marginTop:"100px",marginBottom:"100px"}} >Loading...</h1>
@@ -31,7 +31,7 @@ setisLoading(false)
 return (
    
     <Grid templateColumns={'repeat(4,1fr)'} minH={'600px'} gap="20px">
-          {Menproduct.length>0&&Menproduct.map(el=>(
+          {Kidproduct.length>0&&Kidproduct.map(el=>(
             <Link to={`/product/${el.id}`} key={el.id} > 
             <Stack direction="column" spacing="0px">
                 <Image src={el.image} w='100%' h="400px"  bg="#F9F2F6"  />
@@ -50,4 +50,4 @@ return (
   )
 }
 
-export default MenData
+export default KidData

@@ -7,15 +7,14 @@ import axios from 'axios'
 
 const ProductData = () => {
 
-  // const dispatch=useDispatch()
-  // const {product}=useSelector((store)=>store.productReducer)
+  
 
 const [isLoading,setIsLoading]=useState(false)
   const [women,setwomen]=useState([])
   const [searchParams]=useSearchParams()
   const location=useLocation()
 
-const Gender=searchParams.get("gender")
+// const Gender=searchParams.get("gender")
 
   let obj={
     params:{
@@ -29,7 +28,7 @@ const Gender=searchParams.get("gender")
 
 const prodData=()=>{
   setIsLoading(true)
-  axios.get(`https://waiting-brief-sort.glitch.me/product/?gender=${Gender}`,obj)
+  axios.get(`https://waiting-brief-sort.glitch.me/product/?gender=woman`,obj)
 .then((res)=>setwomen(res.data))
 setIsLoading(false)
 }

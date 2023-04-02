@@ -15,13 +15,44 @@ import {
     Input,
 
   } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import NewAddressPage from '../CartComponent/NewAddressPage'
+import {  getAllData, postData } from '../../redux/Product/action'
+import { useDispatch } from 'react-redux'
 
 function AdminAdd() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null)
   
+    const init={
+      title: "",
+        image: "",
+        description: "",
+        color: "",
+        price: 0,
+        category: "",
+        gender: ""
+    }
+    const dispatch=useDispatch()
+    const [form,setForm]=useState(init)
+    
+    const handleChange=(e)=>{
+      const {name,value}=e.target
+      setForm(prev=>{
+          return {
+              ...prev,[name]:value
+          }
+      })
+  }
+    
+  
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    dispatch(postData(form)).then(()=>dispatch(getAllData))
+    setForm(init)
+    }
+
+    const {title,category,image,price,gender,color,description}=form
     return (
       <>
        
@@ -36,34 +67,34 @@ function AdminAdd() {
              <Flex direction={'column'} gap='8px'>
                 <Flex direction={'column'}>
                     <label>title</label>
-                    <Input />
+                    <Input onChange={handleChange} value={title} name="title"/>
                 </Flex>
                 <Flex direction={'column'}>
                     <label>Image</label>
-                    <Input />
+                    <Input onChange={handleChange} value={image} name="image"/>
                 </Flex>
                 <Flex gap='15px'>
                 <Flex direction={'column'}>
                     <label>price</label>
-                    <Input />
+                    <Input onChange={handleChange} value={price} name="price"/>
                 </Flex>
                 <Flex direction={'column'}>
                     <label>color</label>
-                    <Input />
+                    <Input onChange={handleChange} value={color} name="color"/>
                 </Flex>
                 </Flex>
                 <Flex direction={'column'}>
-                    <label>discription</label>
-                    <Input />
+                    <label>description</label>
+                    <Input onChange={handleChange} value={description} name="description"/>
                 </Flex>
                 <Flex gap='15px'>
                 <Flex direction={'column'}>
-                    <label>price</label>
-                    <Input />
+                    <label>category</label>
+                    <Input onChange={handleChange} value={category} name="category"/>
                 </Flex>
                 <Flex direction={'column'}>
-                    <label>color</label>
-                    <Input />
+                    <label>gender</label>
+                    <Input onChange={handleChange} value={gender} name="gender" />
                 </Flex>
                 </Flex>
              </Flex>
@@ -74,7 +105,7 @@ function AdminAdd() {
               <Button colorScheme='red' mr={3} onClick={onClose}>
                 cancel
               </Button>
-              <Button colorScheme='white' bg="green">Add Product</Button>
+              <Button onClick={handleSubmit} colorScheme='white' bg="green">Add Product</Button>
               </Flex>
             </ModalFooter>
           </ModalContent>

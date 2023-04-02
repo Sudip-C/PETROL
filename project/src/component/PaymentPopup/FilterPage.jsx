@@ -1,6 +1,7 @@
 import { Box, Flex, Input, Checkbox, Grid, Text, Heading, Center, HStack , Select} from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import {
+    Select,
     Menu,
     MenuButton,
     MenuList,
@@ -54,7 +55,7 @@ const FilterPage = ({Page}) => {
 
         <Center>
         <Flex direction="column" justify="center">
-            <Heading fontSize="25px">{Page?.toUpperCase()}</Heading>
+            <Heading fontSize="25px">WOMAN</Heading>
             <Heading textAlign="center"><ChevronDownIcon /></Heading>
         </Flex>
         </Center>

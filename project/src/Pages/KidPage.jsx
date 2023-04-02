@@ -1,9 +1,14 @@
 import React from 'react'
-
-function KidPage() {
+import {  Stack } from '@chakra-ui/react'
+import KidFilterPage from '../component/Kidfilter'
+import KidData from '../component/KidData'
+function MenPage() {
   return (
-    <div>KidPage</div>
+    <Stack direction={'column'} spacing={'20px'} >
+        <KidFilterPage />
+        <KidData />
+    </Stack>
   )
 }
 
-export default KidPage
+export default MenPage

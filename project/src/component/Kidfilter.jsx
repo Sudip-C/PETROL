@@ -14,7 +14,7 @@ import {
 import { useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-const MenFilterPage = () => {
+const KidFilterPage = () => {
 
     const [searchParams,setSearchParams]=useSearchParams() 
     const initialOrder=searchParams.get("order")
@@ -49,7 +49,7 @@ const MenFilterPage = () => {
         <Flex direction="column" gap="30px" pb="30px" pt="20px" py="80px">
         <Center>
         <Flex direction="column" justify="center">
-            <Heading fontSize="25px">MEN</Heading>
+            <Heading fontSize="25px">KIDS</Heading>
             <Heading textAlign="center"><ChevronDownIcon /></Heading>
         </Flex>
         </Center>
@@ -332,4 +332,4 @@ const MenFilterPage = () => {
         </Flex>
     )
 }
-export default MenFilterPage;
+export default KidFilterPage;

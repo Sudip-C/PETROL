@@ -1,4 +1,4 @@
-import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_WOMENDATA_SUCCESS, PATCH_PRODUCT_SUCCESS } from "./actionType"
+import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS,PATCH_PRODUCT_SUCCESS, POST_ADD_SUCCESS } from "./actionType"
 
 
 
@@ -20,18 +20,19 @@ switch(type){
         return{
             ...state,isLoading:false,product:payload
         }
-    case GET_WOMENDATA_SUCCESS:
-        return{
-            ...state,isLoading:false,Womenproduct:payload
-        }
+  
     case GET_DATA_FAILURE:
         return{
             ...state,isError:true
         }
-        case PATCH_PRODUCT_SUCCESS:
-            return{
+    case PATCH_PRODUCT_SUCCESS:
+         return{
                 ...state,isLoading:false
             } 
+    case POST_ADD_SUCCESS:
+        return {
+                    ...state,isLoading:false
+        }   
     default:
         return state
 }
