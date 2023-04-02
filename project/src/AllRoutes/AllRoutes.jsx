@@ -8,8 +8,6 @@ import WomenPage from '../Pages/WomenPage'
 import ProductPage from '../Pages/ProductPage'
 import WishlistPage from '../Pages/WishlistPage'
 import SingleProductPage from '../Pages/SingleProductPage'
-import AddProductPage from '../Pages/AddProductPage'
-import EditProductPage from '../Pages/EditProductPage'
 import AdminLogin from '../Pages/AdminLogin'
 import Login from "../Pages/Login"
 import PrivateRoute from '../AllRoutes/PrivateRoute';
@@ -35,11 +33,8 @@ function AllRoutes() {
         <Route path="myorders" element={<MyOrders/>}/>
         <Route path="/login" element={<Login/>}/>
 
-        <Route path='/cart' element={<CartPage/>} />
+        <Route path='/cart' element={<PrivateRoute><CartPage/></PrivateRoute>} />
         <Route path="/signup" element={<SignUp/>}/>
-        
-
-
         <Route path="/" element={<HomePage/>}  ></Route>
 
         <Route path="/admin" element={<AdminPage/>}/>
@@ -50,8 +45,6 @@ function AllRoutes() {
         <Route path='/womensection' element={<WomenPage/>}/>
         <Route path='/wishlist' element={<WishlistPage/>}/>
         <Route path="/product/:id" element={<SingleProductPage/>}/>
-        <Route path="/addProduct" element={<AddProductPage/>}/>
-        <Route path='/product/:id/edit' element={<EditProductPage/>}/>
         <Route path='/product' element={<ProductPage />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>}/>
         </Routes>

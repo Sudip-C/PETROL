@@ -25,12 +25,14 @@ import {
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 
+import {Link as NavLink} from "react-router-dom"
 const LinkItems = [
   { name: 'Dashboard', icon: FiHome },
   { name: 'Admin Profile', icon: FiTrendingUp },
   { name: 'User Profile', icon: FiCompass },
   { name: 'See All Product', icon: FiStar },
-  { name: 'Settings', icon: FiSettings },
+  { name: 'Settings', icon: FiSettings }
+
 ];
 
 export default function AdminSidebar({ children }) {
@@ -85,6 +87,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
           {link.name}
         </NavItem>
       ))}
+    <NavLink to="/"> <NavItem  icon={'FiHome'}>
+          Home
+        </NavItem></NavLink> 
     </Box>
   );
 };

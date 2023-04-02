@@ -4,7 +4,7 @@ import MenFilterPage from '../component/menfilter'
 import MenData from '../component/Mendata'
 function MenPage() {
   return (
-    <Stack direction={'column'} spacing={'20px'}>
+    <Stack direction={'column'} spacing={'20px'} >
         <MenFilterPage />
         <MenData />
     </Stack>

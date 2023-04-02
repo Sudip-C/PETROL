@@ -17,7 +17,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getCartData } from '../redux/cartReducer/action'
 
 const CartPage = () => {
-
   let arr = JSON.parse(localStorage.getItem('addToCart'))||[]
   let cartData = useSelector(store =>store.cartReducer.cartData)
   let dispatch = useDispatch()
@@ -62,8 +61,8 @@ const CartPage = () => {
             </Stack>
           </Stack>
 
-          <Flex align="center" flex="1" bg={'#F9F8F6'} p={'20px'} >
-            <CartOrderSummary />
+          <Flex align="center" flex="1" bg={'#F9F8F6'} p={'20px'}  >
+            <CartOrderSummary  />
           </Flex>
         </Stack>
       </Box>

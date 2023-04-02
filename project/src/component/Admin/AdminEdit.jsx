@@ -14,12 +14,49 @@ import {
     Input,
 
   } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NewAddressPage from '../CartComponent/NewAddressPage'
+import { useDispatch } from 'react-redux'
+import { editData, getAllData } from '../../redux/Product/action'
+import axios from 'axios'
 
-function AdminEdit() {
+function AdminEdit({id}) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const finalRef = React.useRef(null)
+    const dispatch=useDispatch()
+    // const {product}=useSelector(store=>store.productReducer)
+    
+    const[data,setData]=useState('')
+    
+    
+    const handleChange=(e)=>{
+      const {name,value}=e.target
+      setData(prev=>{
+          return{
+              ...prev,[name]:value
+          }
+      })
+      }
+    
+      const handleEdit =(e)=>{
+        e.preventDefault()
+        dispatch(editData(data,id))
+        .then(()=>{dispatch(getAllData)
+          alert("Data Edited")})
+        }
+        
+    const singledata=(id)=>{
+      axios.get(`https://waiting-brief-sort.glitch.me/product/${id}`)
+      .then((res)=>setData(res.data))
+    }
+    
+    useEffect(()=>{
+      singledata(id)
+    
+    },[])
+
+
+
   
     return (
       <>
@@ -35,34 +72,34 @@ function AdminEdit() {
              <Flex direction={'column'} gap='8px'>
                 <Flex direction={'column'}>
                     <label>title</label>
-                    <Input />
+                    <Input onChange={handleChange} name="title" value={data.title} />
                 </Flex>
                 <Flex direction={'column'}>
                     <label>Image</label>
-                    <Input />
+                    <Input onChange={handleChange} name="image" value={data.image} />
+                </Flex>
+                <Flex gap='15px'>
+                <Flex direction={'column'}>
+                    <label>category</label>
+                    <Input onChange={handleChange} name="category" value={data.category} />
+                </Flex>
+                <Flex direction={'column'}>
+                    <label>color</label>
+                    <Input onChange={handleChange} name="color" value={data.color} />
+                </Flex>
+                </Flex>
+                <Flex direction={'column'}>
+                    <label>description</label>
+                    <Input onChange={handleChange} name="description" value={data.description} />
                 </Flex>
                 <Flex gap='15px'>
                 <Flex direction={'column'}>
                     <label>price</label>
-                    <Input />
+                    <Input onChange={handleChange} name="price" value={data.price} />
                 </Flex>
                 <Flex direction={'column'}>
-                    <label>color</label>
-                    <Input />
-                </Flex>
-                </Flex>
-                <Flex direction={'column'}>
-                    <label>discription</label>
-                    <Input />
-                </Flex>
-                <Flex gap='15px'>
-                <Flex direction={'column'}>
-                    <label>price</label>
-                    <Input />
-                </Flex>
-                <Flex direction={'column'}>
-                    <label>color</label>
-                    <Input />
+                    <label>gender</label>
+                    <Input onChange={handleChange} name="gender" value={data.gender} />
                 </Flex>
                 </Flex>
              </Flex>
@@ -73,7 +110,7 @@ function AdminEdit() {
               <Button colorScheme='red' mr={3} onClick={onClose}>
                 cancel
               </Button>
-              <Button colorScheme='white' bg="green">update</Button>
+              <Button onClick={handleEdit} colorScheme='white' bg="green">update</Button>
               </Flex>
             </ModalFooter>
           </ModalContent>

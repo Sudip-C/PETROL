@@ -15,24 +15,25 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-
+import { useDispatch } from "react-redux";
+import { Authentication } from "../redux/AuthReducer/action";
 // import { useNavigate } from "react-router-dom";
 
  function Login(){
-   //  const { loginWithRedirect } = useAuth0();
-// const navigate=useNavigate()
+ 
 
 
 const[userName,SetUserName]=useState("")
 const[password,setPassword]=useState("")
  const navigate=useNavigate()
 const location=useLocation()
-
+const dispatch=useDispatch()
 
 const handleSubmit=(e)=>{
 e.preventDefault()
 signInWithEmailAndPassword(auth,userName,password)
-.then(()=>{navigate(location.state, {replace:true})
+.then(()=>{dispatch(Authentication)
+  navigate(location.state, {replace:true})
 })
 .catch(()=>{alert("No record found!! Signup instead")
 navigate("/signup")})
