@@ -1,7 +1,8 @@
-import { Button } from '@chakra-ui/react'
+
 import React from 'react'
 import styled from 'styled-components'
-import { Select } from '@chakra-ui/react'
+
+import { Select, Button } from '@chakra-ui/react'
 
 export default function WomenProductCard({item, index, handleSlice}) {
 
@@ -9,13 +10,12 @@ export default function WomenProductCard({item, index, handleSlice}) {
 
     let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
 
-    const handleAddToCart=()=>{
+
+    const handleAddToCart = () => {
         arr.push(item)
-        localStorage.setItem("addToCart",JSON.stringify(arr))
+        localStorage.setItem("addToCart", JSON.stringify(arr))
         alert("Product added to cart")
-    }
-    
-   
+    }   
  
    
   return (
@@ -41,10 +41,11 @@ export default function WomenProductCard({item, index, handleSlice}) {
         <Button bg="white" onClick={()=>handleSlice(index)} _hover={{ bg: 'white'}} marginTop={2} marginLeft="72%">X Remove</Button>
 1   
   )
+
 }
 
 
-const DIV=styled.div`
+const DIV = styled.div`
  
     padding: 20px;
 

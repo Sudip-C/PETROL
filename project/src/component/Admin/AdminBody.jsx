@@ -63,6 +63,7 @@ const AdminBody = () => {
                         <Button variant={'unstyled'} bg="red" px='40px' onClick={()=>handleDelete(el.id)} >Delete</Button>
                         <AdminEdit {...el} />
                        
+
                     </Flex>
                 </Flex>
             </Flex>

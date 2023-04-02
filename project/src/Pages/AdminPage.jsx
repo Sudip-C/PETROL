@@ -11,10 +11,25 @@ import AdminNav from '../component/Admin/AdminNav'
 import AdminBody from '../component/Admin/AdminBody'
 
 
-function AdminPage() {
+
+ export default function AdminPage() {
+const [page,setPage]=useState(1)
+
+const dispatch=useDispatch()
+const{product}=useSelector(store=>store.productReducer)
+
+// const navigate=useNavigate()
+
+const handleDelete=(id)=>{
+  axios.delete(`https://waiting-brief-sort.glitch.me/product/${id}`)
+  .then(()=>dispatch(getAllData))
+}
+
+
 
 
   return (
+
     <Box  h="100vh" zIndex={'1000'} bgColor={'white'} position={'relative'}>
       <HStack w="100%"  spacing="0px" h="100vh" >
         <Box w="30%" >
@@ -28,10 +43,4 @@ function AdminPage() {
 
     </Box>
   )
-
-}
-
-export default AdminPage
-
-
-
+ }

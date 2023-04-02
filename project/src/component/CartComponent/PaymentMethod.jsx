@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { backShippingPage } from '../../redux/cartReducer/action'
 import {Navigate} from 'react-router-dom'
+// import CashPayment from '../PaymentPopup/'
 
 
 const PaymentMethod = () => {
@@ -52,11 +53,12 @@ let dispatch=useDispatch()
                     <Image src={'https://dieselindia.com/_nuxt/img/prepaid.7a63e81.png'} />
                     <Text>PAY ONLINE WITH RAZORPAY</Text>
                 </Flex>
-                <Button
+                {/* <Button
                     w={'70%'}
                     display={isOpen ? 'block' : 'none'}
                     borderRadius={'none'} bg={'blackAlpha.900'}
-                    colorScheme={'white'}>CONTINUE CHECKOUT</Button>
+                    colorScheme={'white'}>CONTINUE CHECKOUT</Button> */}
+                    {/* <OnlinePayment /> */}
             </Flex>
             <Flex
                 direction={'column'}
@@ -75,13 +77,14 @@ let dispatch=useDispatch()
                     <Image src={'https://dieselindia.com/_nuxt/img/COD.c704a94.png'} />
                     <Text>CASH ON DELIVERY</Text>
                 </Flex>
-                <Button
+                {/* <Button
                 // onClick={{<CashOrder />}}
                     w={'60%'}
                     display={open ? 'block' : 'none'}
                     borderRadius={'none'}
                     bg={'blackAlpha.900'}
-                    colorScheme={'white'}>PLACE ORDER</Button>
+                    colorScheme={'white'}>PLACE ORDER</Button> */}
+                    {/* <CashPayment /> */}
             </Flex>
             <Link onClick={button} textDecorationLine={'underline'}>&lt; Back</Link>
 

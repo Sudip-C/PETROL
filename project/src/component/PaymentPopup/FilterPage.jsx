@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Checkbox, Grid, Text, Heading, Center, HStack } from '@chakra-ui/react'
+import { Box, Flex, Input, Checkbox, Grid, Text, Heading, Center, HStack , Select} from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import {
     Select,
@@ -67,7 +67,6 @@ const FilterPage = ({Page}) => {
             <Grid templateColumns={'repeat(6,1fr)'} gap="30px">
                 <Menu border="1px solid red" w="200px">
                     <MenuButton rightIcon={<ChevronDownIcon />} 
-                        border='1px solid gray'
                         px={4}
                         py={2}
                         transition='all 0.1s'
@@ -92,7 +91,7 @@ const FilterPage = ({Page}) => {
                 </Menu>
                 <Menu>
                     <MenuButton rightIcon={<ChevronDownIcon />}
-                    border='1px solid gray'
+             
                         px={4}
                         py={2}
                         transition='all 0.1s'
@@ -117,7 +116,7 @@ const FilterPage = ({Page}) => {
                 </Menu>
                 <Menu>
                     <MenuButton rightIcon={<ChevronDownIcon />}
-                      border='1px solid gray'
+                
                         px={4}
                         py={2}
                         transition='all 0.1s'

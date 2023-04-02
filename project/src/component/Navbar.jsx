@@ -3,18 +3,12 @@ import { BsSearch, BsHandbag, BsQuestionCircle, BsHeart } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc"
 import { IconContext } from "react-icons";
 import logo from '../photos/logo.png'
-
-
 import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Image, Icon,  useColorMode, Button} from '@chakra-ui/react';
-
 import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { Navigate, Link as RoutLink, useNavigate, useSearchParams } from 'react-router-dom'
 import { NAV_ITEMS } from "./NavComponent/DropdownItem";
-
 import { useSelector } from "react-redux";
-
 import { useEffect, useState } from "react";
-
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
 
@@ -92,25 +86,6 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
-//   const[searchParams,setSearchParams]=useSearchParams()
-
-//   const initialgender=searchParams.get("gender")
-// const [gender,setGender]=useState(initialgender||"")
-const navigate=useNavigate()
-
-// const handleGender=(e)=>{
-//   setGender(e.target.value)
-
-// }
-
-// useEffect(()=>{
-
-//   let Obj={
-//     gender,
-//   }
-//   setSearchParams(Obj)
-// },[gender])
-
 
   return (
     <Stack direction={'row'} spacing={4} w="100%">
@@ -121,6 +96,7 @@ const navigate=useNavigate()
           <PopoverTrigger w="100%">
 
             <Flex p={2}  color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder" direction={'row'} gap={6} alignItems={'center'}>
+
               <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750" onClick={()=>{
                  navigate("/mensection") }}  >MAN</Button >
               <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750" onClick={()=>{
@@ -129,13 +105,10 @@ const navigate=useNavigate()
                 navigate("/kidsection")}} >KIDS</Button>
               <Link border={'1px solid white'} p={'5px'}>SS'M</Link>
 
-          
+        
               <Link>LAST CHANCE</Link>
             </Flex>
           </PopoverTrigger>
-          {/* <PopoverContent w={'100vw'}>
-           <Box w={'100vw'} h={'70px'} bg="blackAlpha.600"></Box>
-          </PopoverContent> */}
         </Popover>
 
       </Box>
