@@ -2,17 +2,16 @@ import React, { useEffect, useState } from 'react'
 import "../CSS/singleProd.css"
 import Carousals from '../component/carousal'
 import { TfiHeart} from "react-icons/tfi";
-import {  useSelector } from 'react-redux';
+// import {  useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
 function SingleProductPage() {
   const[Singledata,setSingleData]=useState('')
   const {id}=useParams()
   let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
   let wishlist=JSON.parse(localStorage.getItem("addToWishlist"))||[]
-
   
-
 let getData=()=>{
   axios.get(`https://waiting-brief-sort.glitch.me/product/${id}`)
   .then(res=>setSingleData(res.data))
