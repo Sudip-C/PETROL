@@ -22,12 +22,6 @@ let getData=()=>{
      getData()
   },[])
 
-  useEffect(()=>{
-    let single=Menproduct.find((el)=>el.id===+id)
-    setSingleData(single)
- 
-  },[])
-
    const handleAddToCart=()=>{
     arr.push(Singledata)
     localStorage.setItem("addToCart",JSON.stringify(arr))
@@ -35,7 +29,7 @@ let getData=()=>{
    }
  
    const addToWishlist=()=>{
-    wishlist.push(data)
+    wishlist.push(Singledata)
     localStorage.setItem("addToWishlist",JSON.stringify(wishlist))
     alert("Product added to wishlist")
    }
