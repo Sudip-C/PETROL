@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Checkbox, Grid, Text, Heading, Center, HStack, Select } from '@chakra-ui/react'
+import { Box, Flex, Input, Checkbox, Grid, Text, Heading, Center, HStack } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import {
     Menu,
@@ -14,7 +14,7 @@ import {
 import { useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-const FilterPage = () => {
+const FilterPage = ({Page}) => {
 
     const [searchParams,setSearchParams]=useSearchParams() 
     const initialOrder=searchParams.get("order")
@@ -54,7 +54,7 @@ const FilterPage = () => {
         <Flex direction="column" gap="30px" pb="30px" pt="20px">
         <Center>
         <Flex direction="column" justify="center">
-            <Heading fontSize="25px">WOMEN</Heading>
+            <Heading fontSize="25px">{Page?.toUpperCase()}</Heading>
             <Heading textAlign="center"><ChevronDownIcon /></Heading>
         </Flex>
         </Center>

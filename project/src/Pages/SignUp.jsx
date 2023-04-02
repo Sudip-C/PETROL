@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import banner from "../photos/minibanner.png"
 import "../CSS/login.css"
+import { Button} from '@chakra-ui/react'
 import {
-   Button,
+
    Flex,
    FormControl,
    FormLabel,
@@ -12,32 +13,25 @@ import {
    useColorModeValue,
   
  } from '@chakra-ui/react';
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-
 // import { useNavigate } from "react-router-dom";
 
- function Login(){
-   //  const { loginWithRedirect } = useAuth0();
-// const navigate=useNavigate()
-
+ function SignUp(){
 
 const[userName,SetUserName]=useState("")
 const[password,setPassword]=useState("")
- const navigate=useNavigate()
-const location=useLocation()
-
+const[message,setMessage]=useState("")
+const navigate=useNavigate()
 
 const handleSubmit=(e)=>{
 e.preventDefault()
-signInWithEmailAndPassword(auth,userName,password)
-.then(()=>{navigate(location.state, {replace:true})
-})
-.catch(()=>{alert("No record found!! Signup instead")
-navigate("/signup")})
-SetUserName("")
-setPassword("")
+createUserWithEmailAndPassword(auth,userName,password)
+.then((credential)=>{
+    console.log(credential)
+    navigate("/")
+}).catch((err)=>alert(err))
 }
 
 
@@ -62,13 +56,15 @@ return(
          //  my={12}
           >
           <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
-          Login to your account
+          SignUp for your account
           </Heading>
-          
+          <Heading  lineHeight={1.1} fontSize={{ base: 'l', md: '2xl' }}>
+         {message}
+          </Heading>
           <FormControl id="email" isRequired>
             <FormLabel>Email address</FormLabel>
             <Input
-              placeholder="your-Email"
+              placeholder="your-username"
               _placeholder={{ color: 'gray.500' }}
               type="text"
               onChange={(e)=>SetUserName(e.target.value)}
@@ -88,16 +84,15 @@ return(
               }}
               onClick={handleSubmit}
               >
-              Sign in
+              Sign Up
             </Button>
           </Stack>
         </Stack>
       </Flex>
-<p>Don't have acount <Link to="/signup"><b>Signup</b></Link></p>
-{/* <p>By continuing , I agree to the <b>terms of use</b> & <b>Privacy policy</b></p> */}
+<p>By continuing , I agree to the <b>terms of use</b> & <b>Privacy policy</b></p>
 </div>
 
    </div>
 )
 }
-export default Login
+export default SignUp

@@ -3,7 +3,10 @@ import Carousals from '../component/carousal'
 import MySlider from '../component/slider'
 import "../CSS/Home.css"
 import { data1, data2 } from '../shortApi/api1'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
+import ProductData from '../component/PaymentPopup/ProductData'
+import FilterPage from '../component/PaymentPopup/FilterPage'
+import ProductPage from './ProductPage'
 
 const banner=[
   "https://diesel.gumlet.io/banner/167825364411.webp?compress=true&q=70",
@@ -12,6 +15,20 @@ const banner=[
 
 
 function HomePage() {
+
+//   const [searchParams]=useSearchParams()
+// const mydata=searchParams.get("gender")
+// localStorage.setItem("pageName",JSON.stringify(mydata))
+// const anme=JSON.parse(localStorage.getItem("pageName"))
+// console.log(anme)
+// if(anme!==null){
+//   return (
+  
+//   <ProductPage/>
+  
+//   )
+// }else
+
   return (
     <div style={{paddingTop:"70px"}}>
 <Carousals pictures={banner} height={"700px"}/>

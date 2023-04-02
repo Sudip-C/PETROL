@@ -32,22 +32,22 @@ let getData=()=>{
 
  
 
-let data=  {
+// let data=  {
     
-    "title": "1956-SP STRAIGHT FIT WOMAN BLUE MEDIUM WASHED JEANS",
-    "image": ["https://diesel.gumlet.io/product/410291797001/665/410291797005_1.jpg?compress=true&q=70",
-    "https://diesel.gumlet.io/product/410291797001/665/410291797005_2.jpg?compress=true&q=70",
-  "https://diesel.gumlet.io/product/410291797001/665/410291797005_4.jpg?compress=true&q=70"],
-    "description": "Regular style with a high waist and straight leg. Channeling a rock-n-roll vibe, its authentic influences include a straight-cut leg and button fly. It's crafted from inside-out fabric and features side bands along the length of the leg.",
-    "color": "blue",
-    "price": 22399,
-    "category": "jeans",
-    "gender":"woman",
-    "id": 1
+//     "title": "1956-SP STRAIGHT FIT WOMAN BLUE MEDIUM WASHED JEANS",
+//     "image": ["https://diesel.gumlet.io/product/410291797001/665/410291797005_1.jpg?compress=true&q=70",
+//     "https://diesel.gumlet.io/product/410291797001/665/410291797005_2.jpg?compress=true&q=70",
+//   "https://diesel.gumlet.io/product/410291797001/665/410291797005_4.jpg?compress=true&q=70"],
+//     "description": "Regular style with a high waist and straight leg. Channeling a rock-n-roll vibe, its authentic influences include a straight-cut leg and button fly. It's crafted from inside-out fabric and features side bands along the length of the leg.",
+//     "color": "blue",
+//     "price": 22399,
+//     "category": "jeans",
+//     "gender":"woman",
+//     "id": 1
    
-   }
+//    }
 
-  },[])
+
 
 
    const handleAddToCart=()=>{
@@ -57,7 +57,7 @@ let data=  {
    }
  
    const addToWishlist=()=>{
-    wishlist.push(data)
+    wishlist.push(Singledata)
     localStorage.setItem("addToWishlist",JSON.stringify(wishlist))
     alert("Product added to wishlist")
    }
