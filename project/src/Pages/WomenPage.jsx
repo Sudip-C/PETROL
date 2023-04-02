@@ -14,7 +14,7 @@ function WomenPage() {
       {/* <div className='Main-body'> */}
 
 
-      <div className='Main-div'> */}
+      <div className='Main-div'> */
 
       <SidebarWomen/>
       <WomanProductList/>

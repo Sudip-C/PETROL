@@ -34,9 +34,14 @@ function AllRoutes() {
         <Route path='/addressbook' element={<AddressBook/>}/>
         <Route path="myorders" element={<MyOrders/>}/>
         <Route path="/login" element={<Login/>}/>
+
         <Route path='/cart' element={<CartPage/>} />
         <Route path="/signup" element={<SignUp/>}/>
-        <Route path="/" element={<HomePage/>} / >
+        
+
+
+        <Route path="/" element={<HomePage/>}  ></Route>
+
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/kidsection' element={<KidPage/>}/>

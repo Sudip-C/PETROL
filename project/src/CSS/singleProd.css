@@ -2,7 +2,7 @@
     width: 95%;
     margin: auto;
     margin-bottom: 25px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
    display: flex;
    flex-direction: row;
     justify-content: space-around;}

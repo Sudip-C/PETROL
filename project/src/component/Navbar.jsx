@@ -3,20 +3,29 @@ import { BsSearch, BsHandbag, BsQuestionCircle, BsHeart } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc"
 import { IconContext } from "react-icons";
 import logo from '../photos/logo.png'
-import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Image, Icon, Button } from '@chakra-ui/react';
+
+
+import { Box, Flex, Text, IconButton, Stack, Collapse, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue, useBreakpointValue, useDisclosure, Image, Icon,  useColorMode, Button} from '@chakra-ui/react';
+
 import { HamburgerIcon, CloseIcon, SearchIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import { Navigate, Link as RoutLink, useNavigate, useSearchParams } from 'react-router-dom'
 import { NAV_ITEMS } from "./NavComponent/DropdownItem";
-import { useAuth0 } from "@auth0/auth0-react";
+
 import { useSelector } from "react-redux";
+
 import { useEffect, useState } from "react";
+
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+
 
 
 
 
 
 export default function Navbar() {
-  const { isOpen, onToggle } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { sOpen, onToggle } = useDisclosure();
   const { isAuthenticated } = useAuth0();
   let localData = useSelector(store => store.cartReducer.cartData)
   let cartCount = 0;
@@ -32,7 +41,7 @@ export default function Navbar() {
           <IconButton
             onClick={onToggle}
             icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              sOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
@@ -55,7 +64,13 @@ export default function Navbar() {
             <IconContext.Provider value={{ size: "20px" }} >
 
 
+
               <RoutLink to= "/account" > <Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }}> <VscAccount color="white" /></Box></RoutLink>
+
+            {/* <Button onClick={toggleColorMode}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button> */}
+              
               <RoutLink to='/search'><Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box></RoutLink>
               <RoutLink to='/temp'>  <Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box></RoutLink>
               <RoutLink to='/wishlist'><Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }}> <BsHeart color="white" /></Box></RoutLink>
@@ -104,6 +119,7 @@ useEffect(()=>{
 
         <Popover trigger={'hover'} placement={'bottom-start'} w="100%">
           <PopoverTrigger w="100%">
+
             <Flex p={2}  color={linkColor} fontSize={14} display='flex' justifyContent="space-between" w="100%" fontWeight="bolder" direction={'row'} gap={6} alignItems={'center'}>
               <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750" onClick={(e)=>{handleGender(e)
                  navigate("/product") }}  value={"mens"}>MAN</Button >
@@ -112,6 +128,8 @@ useEffect(()=>{
               <Button bg="none" w="50px" _hover={{bg:"none"}} fontWeight="750"onClick={(e)=>{handleGender(e)
                 navigate("/product")}} value={"kids"}>KIDS</Button>
               <Link border={'1px solid white'} p={'5px'}>SS'M</Link>
+
+          
               <Link>LAST CHANCE</Link>
             </Flex>
           </PopoverTrigger>
@@ -190,4 +208,10 @@ const MobileNavItem = ({ label, children, href }) => {
     </Stack>
   );
 
+
             }
+
+   
+
+
+

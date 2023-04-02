@@ -11,7 +11,7 @@ function App() {
     <div className="App">
      <Navbar/>
      <AllRoutes/>
-     <Footer/>
+     {/* <Footer/> */}
      <GoToTop />
     </div>
   );
