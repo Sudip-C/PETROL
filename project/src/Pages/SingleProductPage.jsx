@@ -2,16 +2,24 @@ import React, { useEffect, useState } from 'react'
 import "../CSS/singleProd.css"
 import Carousals from '../component/carousal'
 import { TfiHeart} from "react-icons/tfi";
-import {  useSelector } from 'react-redux';
+// import {  useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
 function SingleProductPage() {
   const[Singledata,setSingleData]=useState('')
   const {id}=useParams()
+
   let arr=JSON.parse(localStorage.getItem('addToCart'))||[]
   let wishlist=JSON.parse(localStorage.getItem("addToWishlist"))||[]
 
   
+
+  // const {women}=useSelector(store=>store.womenReducer)
+//   const {Menproduct}=useSelector(store=>store.productReducer)
+// console.log(Menproduct)
+ 
+
 
 let getData=()=>{
   axios.get(`https://waiting-brief-sort.glitch.me/product/${id}`)
@@ -22,11 +30,25 @@ let getData=()=>{
      getData()
   },[])
 
-  useEffect(()=>{
-    let single=Menproduct.find((el)=>el.id===+id)
-    setSingleData(single)
  
+
+let data=  {
+    
+    "title": "1956-SP STRAIGHT FIT WOMAN BLUE MEDIUM WASHED JEANS",
+    "image": ["https://diesel.gumlet.io/product/410291797001/665/410291797005_1.jpg?compress=true&q=70",
+    "https://diesel.gumlet.io/product/410291797001/665/410291797005_2.jpg?compress=true&q=70",
+  "https://diesel.gumlet.io/product/410291797001/665/410291797005_4.jpg?compress=true&q=70"],
+    "description": "Regular style with a high waist and straight leg. Channeling a rock-n-roll vibe, its authentic influences include a straight-cut leg and button fly. It's crafted from inside-out fabric and features side bands along the length of the leg.",
+    "color": "blue",
+    "price": 22399,
+    "category": "jeans",
+    "gender":"woman",
+    "id": 1
+   
+   }
+
   },[])
+
 
    const handleAddToCart=()=>{
     arr.push(Singledata)
