@@ -1,7 +1,10 @@
 import React from 'react'
-import { Button } from '@chakra-ui/react'
+import { Button,Flex,Heading,Center } from '@chakra-ui/react'
 import WomenProductCard from "../component/WomenProductCard"
 import styled from 'styled-components'
+
+import { ChevronDownIcon } from '@chakra-ui/icons'
+
 const wishList=[
   {
     "id": 61,
@@ -52,6 +55,7 @@ const wishList=[
 
 
 
+
 function WishlistPage() {
   
 
@@ -62,9 +66,13 @@ function WishlistPage() {
 
 
   return (
-    <div>
-      <h1 style={{textAlign:"center"}}>Wishlist</h1>
-
+    <div style={{minHeight:"700px",padding:"80px", paddingBottom:"100px"}}>
+     <Center>
+        <Flex direction="column" justify="center">
+            <Heading fontSize="25px">WISHLIST</Heading>
+            <Heading textAlign="center"><ChevronDownIcon /></Heading>
+        </Flex>
+        </Center>
     <DIV>
       {wishList.length>0 && wishList.map((item, index)=>{
         return (
@@ -80,7 +88,8 @@ export default WishlistPage
 
 const DIV=styled.div`
     width: 100%;
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 10px; */
+    gap: 10px; 
 `

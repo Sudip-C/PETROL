@@ -1,11 +1,11 @@
-import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_WOMENDATA_SUCCESS } from "./actionType"
+import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_WOMENDATA_SUCCESS, PATCH_PRODUCT_SUCCESS } from "./actionType"
 
 
 
 const initialState={
     isLoading:false,
     isError:false,
-    Menproduct:[],
+    product:[],
    
 
 }
@@ -18,7 +18,7 @@ switch(type){
         }
     case GET_DATA_SUCCESS:
         return{
-            ...state,isLoading:false,Menproduct:payload
+            ...state,isLoading:false,product:payload
         }
     case GET_WOMENDATA_SUCCESS:
         return{
@@ -28,6 +28,10 @@ switch(type){
         return{
             ...state,isError:true
         }
+        case PATCH_PRODUCT_SUCCESS:
+            return{
+                ...state,isLoading:false
+            } 
     default:
         return state
 }

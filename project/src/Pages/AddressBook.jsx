@@ -6,7 +6,7 @@ function AddressBook() {
   const { logout } = useAuth0()
 
   return (
-    <div className='container'>
+    <div className='Container'>
     <div className="mainbody">
       <h1>My Account</h1>
       <div className='Account-box'>

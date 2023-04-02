@@ -1,16 +1,16 @@
 import axios from "axios"
-import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS, GET_WOMENDATA_SUCCESS } from "./actionType"
+import { GET_DATA_FAILURE, GET_DATA_REQUEST, GET_DATA_SUCCESS, PATCH_PRODUCT_SUCCESS} from "./actionType"
 
-export const getMenData=(obj)=>(dispatch)=>{
+export const getAllData=(dispatch)=>{
     dispatch({type:GET_DATA_REQUEST})
-    axios.get(`https://waiting-brief-sort.glitch.me/mens`,obj)
+    axios.get(`https://waiting-brief-sort.glitch.me/product`)
     .then((res)=>dispatch({type:GET_DATA_SUCCESS,payload:res.data}))
     .catch(()=>dispatch({type:GET_DATA_FAILURE}))
 }
 
-export const getWomenData=(dispatch)=>{
+export const editData=(data,id)=>(dispatch)=>{
     dispatch({type:GET_DATA_REQUEST})
-    axios.get(`https://waiting-brief-sort.glitch.me/kids`)
-    .then((res)=>dispatch({type:GET_WOMENDATA_SUCCESS,payload:res.data}))
+    return axios.patch(`https://waiting-brief-sort.glitch.me/product/${id}`,data)
+    .then(()=>dispatch({type:PATCH_PRODUCT_SUCCESS}))
     .catch(()=>dispatch({type:GET_DATA_FAILURE}))
 }

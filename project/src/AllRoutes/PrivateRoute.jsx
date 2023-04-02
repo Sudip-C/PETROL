@@ -1,12 +1,26 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+import { onAuthStateChanged } from "firebase/auth";
+import React, { useEffect, useState } from "react";
+import { Navigate, useLocation } from "react-router-dom";
+import { auth } from "../firebase";
 
  function PrivateRoute({children}){
-    const {isAuthenticated } = useAuth0();
-    if(!isAuthenticated){
-        return <Navigate to="/login"/>
+
+    const [isAuthenticated,setisAunthenticated]=useState(null)
+
+    const location=useLocation()
+    useEffect(()=>{
+  const listen=onAuthStateChanged(auth,(user)=>{
+    if(user){
+        setisAunthenticated(user)
+    }else{
+        setisAunthenticated(null)
     }
-    return children
+  });
+
+  
+    },[])
+return(
+    isAuthenticated?children:<Navigate to="/login" state={location.pathname} replace/>
+)
 }
 export default PrivateRoute

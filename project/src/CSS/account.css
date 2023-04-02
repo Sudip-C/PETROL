@@ -1,11 +1,11 @@
-.container{
+.Container{
     width:95%;
     margin: auto;
     display: flex;
     justify-content:space-around;
     align-items: center;
     margin-top: 100px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 
@@ -113,7 +113,7 @@
     margin: 30px;
 }
 @media screen and (min-width:700px) and (max-width:999px){
-    .container{
+    .Container{
         width:90%;
         margin: auto;
         display: flex;
@@ -168,7 +168,7 @@
     }
 }
 @media screen and (min-width:200px) and (max-width:699px){
-    .container{
+    .Container{
         width:90%;
         margin: auto;
         display: flex;

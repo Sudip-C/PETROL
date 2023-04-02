@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route,Routes} from "react-router-dom"
+import {Route,Routes, useSearchParams} from "react-router-dom"
 import HomePage from "../Pages/HomePage"
 import KidPage from '../Pages/KidPage'
 import AdminPage from '../Pages/AdminPage'
@@ -18,23 +18,30 @@ import AddressBook from '../Pages/AddressBook'
 import MyOrders from '../Pages/Myorders'
 import CartPage from "../Pages/CartPage"
 import CheckoutPage from '../Pages/CheckoutPage'
+import SignUp from '../Pages/SignUp'
 
 
 
 
 function AllRoutes() {
+
+
   return (
     <div>
         <Routes>
 
-        <Route path="/account" element={<Account/>} />
+        <Route path="/account" element={<PrivateRoute><Account/></PrivateRoute>} />
         <Route path='/addressbook' element={<AddressBook/>}/>
         <Route path="myorders" element={<MyOrders/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path='/cart' element={<PrivateRoute><CartPage/></PrivateRoute>} />
+
+        <Route path='/cart' element={<CartPage/>} />
+        <Route path="/signup" element={<SignUp/>}/>
+        
 
 
         <Route path="/" element={<HomePage/>}  ></Route>
+
         <Route path="/admin" element={<AdminPage/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/kidsection' element={<KidPage/>}/>

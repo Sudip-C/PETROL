@@ -21,6 +21,7 @@ let getData=()=>{
      getData()
   },[])
 
+
    const handleAddToCart=()=>{
     arr.push(Singledata)
     localStorage.setItem("addToCart",JSON.stringify(arr))

@@ -4,7 +4,7 @@ import {GET_PRODUCT_FAIL, GET_PRODUCT_REQ, GET_PRODUCT_SUCCESS} from "./actionTy
 
 export const getProduct=(paramObj)=>(dispatch)=>{
     dispatch({type:GET_PRODUCT_REQ})
-    axios.get(`https://waiting-brief-sort.glitch.me/woman`,paramObj)
+    axios.get(`https://waiting-brief-sort.glitch.me/product/?gender=woman`,paramObj)
     .then((res)=>{
         dispatch({type:GET_PRODUCT_SUCCESS, payload:res.data})
     }).catch(()=>{
