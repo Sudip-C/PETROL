@@ -58,7 +58,7 @@ export default function Navbar() {
               <RoutLink to={isAuthenticated ? "/account" : "/login"}> <Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }}> <VscAccount color="white" /></Box></RoutLink>
               <RoutLink to='/search'><Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }} display={{ base: 'none', md: 'none', lg: 'block' }}>  <BsSearch color="white" /></Box></RoutLink>
               <RoutLink to='/temp'>  <Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }} display={{ base: 'none', md: 'none', lg: 'block' }}> <BsQuestionCircle color="white" /></Box></RoutLink>
-              <RoutLink to='/whishlist'><Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }}> <BsHeart color="white" /></Box></RoutLink>
+              <RoutLink to='/wishlist'><Box border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '12px' }}> <BsHeart color="white" /></Box></RoutLink>
               <RoutLink to='/cart'><Flex boxSizing="border-box" direction={'row'} border={{ base: 'none', md: '1px solid white' }} p={{ base: '10px', md: '9.7px' }}> <BsHandbag color="white" /><Text color={'white'} >{cartCount}</Text></Flex></RoutLink>
               
             </IconContext.Provider>
@@ -168,4 +168,4 @@ const MobileNavItem = ({ label, children, href }) => {
       </Collapse>
     </Stack>
   );
-
+}
