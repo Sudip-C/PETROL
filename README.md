@@ -19,13 +19,16 @@ User side: The site has 6 pages on user side that covers the entire user-flow.
 
 1.	Home page: It showcases top products present on the site and provides routes to navigate to different parts of the site.
 2.	Account page: Here user can sign-up, sign-in or sign-out to his account. If user is signed-in, he can see his order details and profile information on this      page.
+#PRODUCT PAGE:
 ![Screenshot 03-04-2023 10_44_10](https://user-images.githubusercontent.com/110247476/229859963-84c7f054-abbb-4643-bef7-0638df77f8e6.png)
 
+#PRODUCT DETAILS PAGE
 3.	Products page: The products page lists all the products available. It also provides sorting and filtering features to narrow down the options.
 ![Screenshot 03-04-2023 10_47_19](https://user-images.githubusercontent.com/110247476/229423982-f9c1794d-aa6f-4b73-a96e-301a00796f36.png)
 
 4.  Product Details page: In this page we can see all the details of a perticular product and add this product to cart and wishlist.
 5.  Wishlist page: Here user can see the products that wishlisted. user can add this product to cart or remove.
+#CART PAGE
 	![Captures 03-04-2023 10_48_43](https://user-images.githubusercontent.com/110247476/229423888-6197684b-df09-461c-9c15-c35e828d3f2c.png)
 4.  Cart page: All the items added into the cart are shown here. User can remove product from the cart.
 
