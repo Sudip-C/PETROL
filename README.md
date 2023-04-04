@@ -37,9 +37,8 @@ User side: The site has 6 pages on user side that covers the entire user-flow.
 
 
 #CART PAGE
+![Captures 03-04-2023 10_48_43](https://user-images.githubusercontent.com/110247476/229860784-6f49916d-9174-431d-82d0-b57d1ced3eb9.png)
 
-
-	![Captures 03-04-2023 10_48_43](https://user-images.githubusercontent.com/110247476/229423888-6197684b-df09-461c-9c15-c35e828d3f2c.png)
 4.  Cart page: All the items added into the cart are shown here. User can remove product from the cart.
 
 
