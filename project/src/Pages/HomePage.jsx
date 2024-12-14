@@ -60,10 +60,10 @@ function HomePage() {
   </div>
 </div>
 <div className='cards'>
-<img src="https://diesel.gumlet.io/cms_images/1676638237SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_BIG%20D_16_9_300dpi_16-9_300DPI.webp?compress=true&q=70" alt="cards"/>
-<img src="https://diesel.gumlet.io/cms_images/1676638471SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_LUNAR%20NEW%20YEAR%20OF%20THE%20RABBIT%20_16_9_300dpi_DIESEL_OPC%20SS23-2_LNY%20RABBIT_FULL%20UX%2002_005_4.webp?compress=true&q=70" alt="cards"/>
-<img src="https://diesel.gumlet.io/cms_images/1676639325SS23%20DROP2_LOOKBOOK%20&%20OPC%20SELL%20OUT%20CROPS_LUNAR%20NEW%20YEAR%20OF%20THE%20RABBIT%20_16_9_300dpi_DIESEL_OPC%20SS23-2_LNY%20RABBIT_FULL%20UX%2002_028_4.webp?compress=true&q=70" alt="cards"/>
-<img src="https://diesel.gumlet.io/cms_images/1676638608GEN6%20GRIFFED%20SMARTWATCH%20FW22_STILLS_DZT2042_JPEG_GEN6_Still_[HO22]_[DZT2042]%2016-9.webp?compress=true&q=70" alt="cards"/>
+<img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/qlNgW4/original/banner/17331682461336x591.webp?compress=true&q=70" alt="cards"/>
+<img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/qlNgW4/original/banner/1732709128Desktop_3.webp?compress=true&q=70" alt="cards"/>
+<img src="https://cdn.pixelspray.io/v2/black-bread-289bfa/qlNgW4/t.resize(w:450)/product/410373857006/665/410373857006_1_4264.webp" alt="cards"/>
+<img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/qlNgW4/t.resize(w:450)/product/410372560020/665/410372560020_1_3519.webp" alt="cards"/>
 </div>
 
 <div className='badges'>
@@ -102,7 +102,7 @@ function HomePage() {
 </div>
 
 <div className='bottom-banner'>
-<img src="https://diesel.gumlet.io/cms_images/1671005754Artboard%203@3x.webp" alt="banner"/>
+<img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/qlNgW4/original/banner/1732709128Desktop_3.webp?compress=true&q=70" alt="banner"/>
 <button className='button1'>SHOP MAN</button>
 <button className='button2'>SHOP WOMEN</button>
 </div>
