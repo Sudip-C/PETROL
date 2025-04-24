@@ -1,6 +1,6 @@
 import { CloseButton, Flex, Link, Select, useColorModeValue as mode, Stack, Image, Box, Text, HStack, Icon, Button, Divider, Tooltip } from '@chakra-ui/react'
 import { DeleteIcon } from '@chakra-ui/icons'
-
+import photo1 from '../../photos/photo4.jpg'
 
 const CartItem = (props) => {
   const { title, image, description, color, price, category, id , del } = props
@@ -9,7 +9,7 @@ const CartItem = (props) => {
 
       {/* left part of product item  */}
       <Flex direction="row" gap="5" width={{ base: '100%', md: '50%' }} alignItems={'center'} >
-        <Image rounded="lg" width="90px" h={'110px'} src={image[0]} alt={title} draggable="false" loading="lazy"
+        <Image rounded="lg" width="90px" h={'110px'} src={photo1} alt={title} draggable="false" loading="lazy"
           bg={'gray.500'} />
         <Box pt="4">
           <Stack spacing="0.5">

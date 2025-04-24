@@ -3,7 +3,7 @@ import {
   Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Divider, Flex, Heading, HStack, Image, Input, Link, Stack, Text, useColorModeValue as mode, VStack,
 } from '@chakra-ui/react'
 import { useSelector } from 'react-redux'
-
+import photo1 from '../../photos/photo4.jpg'
 
 const CheckoutProductSummary = () => {
   let checkoutData=useSelector(store=>store.cartReducer.cartData)
@@ -18,7 +18,7 @@ const CheckoutProductSummary = () => {
 
           checkoutData.map(el => (
             <Flex direction="row" gap="2" width={{ base: '100%', md: '100%' }} alignItems={'center'}>
-              <Image rounded="lg" w="70px" h={'80px'} src={el.image[0]} alt={el.title} draggable="false" loading="lazy"
+              <Image rounded="lg" w="70px" h={'80px'} src={photo1} alt={el.title} draggable="false" loading="lazy"
                 bg={'gray.500'}  />
               <Box pt="4">
                 <Stack spacing="0.5">

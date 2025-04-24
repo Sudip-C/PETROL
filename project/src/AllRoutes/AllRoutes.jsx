@@ -16,6 +16,7 @@ import MyOrders from '../Pages/Myorders'
 import CartPage from "../Pages/CartPage"
 import CheckoutPage from '../Pages/CheckoutPage'
 import SignUp from '../Pages/SignUp'
+import EmptyCart from '../component/CartComponent/EmptyCart'
 
 
 
@@ -42,12 +43,13 @@ function AllRoutes() {
         <Route path='/kidsection' element={<KidPage/>}/>
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/mensection' element={<MenPage/>}/>
-        <Route path='/womensection' element={<WomenPage/>}/>
+        {/* <Route path='/womensection' element={</>}/> */}
         <Route path='/wishlist' element={<WishlistPage/>}/>
         <Route path="/product/:id" element={<SingleProductPage/>}/>
 
         <Route path='/product' element={<ProductPage />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
+        <Route path='/emptycart' element={<EmptyCart/>}/>
       </Routes>
     </div>
   )

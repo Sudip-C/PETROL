@@ -5,6 +5,9 @@ import { TfiHeart} from "react-icons/tfi";
 // import {  useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import photo1 from "../photos/photo1.jpg";
+import photo2 from "../photos/photo4.jpg";
+import photo3 from "../photos/photo7.jpg";
 
 function SingleProductPage() {
   const[Singledata,setSingleData]=useState('')
@@ -34,10 +37,16 @@ let getData=()=>{
     alert("Product added to wishlist")
    }
 
+   const carausalImages=[
+photo1,
+photo2,
+photo3
+   ]
+
   return (
     <div className='main' style={{paddingTop:'70px',minHeight:'900px'}}>
     <div className='picture'>
-<Carousals pictures={Singledata?.image} height={"700px"}/>
+<Carousals pictures={carausalImages} height={"700px"}/>
     </div>
 <div className='details'>
 <h1>{Singledata.title}</h1>

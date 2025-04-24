@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Select, Button } from '@chakra-ui/react'
+import photo1 from '../photos/photo4.jpg'
 
 export default function WomenProductCard({item, index, handleSlice}) {
 
@@ -22,7 +23,7 @@ export default function WomenProductCard({item, index, handleSlice}) {
     <DIV>
 
 
-    <img src={item.image[0]} alt={item.title} />
+    <img src={photo1} alt={item.title} />
     <p className='price'>₹ {item.price} </p>
     <h3>{item.title.slice(0,23)}...</h3>
     <p>{item.category}</p>
@@ -39,23 +40,17 @@ export default function WomenProductCard({item, index, handleSlice}) {
         <br/>
         <Button  onClick={handleAddToCart} borderRadius="none" bg="white" border=".5px solid black"  _hover={{ bg: 'black' ,color:"white"}} w="100%">ADD TO BAG</Button>
         <Button bg="white" onClick={()=>handleSlice(index)} _hover={{ bg: 'white'}} marginTop={2} marginLeft="72%">X Remove</Button>
-1   
+  </DIV>
   )
 
 }
 
 
 const DIV = styled.div`
- 
     padding: 20px;
-
-    
-
     button{
-       
-        margin-top: 5px;
+       margin-top: 5px;
     }
-
     .price{
         font-weight:bold;
     }
@@ -68,6 +63,6 @@ const DIV = styled.div`
         width: 100%;
         height: 400px;
     }
-
-   
 `
+   
+

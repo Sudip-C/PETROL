@@ -52,7 +52,7 @@ const CartOrderSummary = () => {
         Total: ₹{totalPrice}
       </Heading>
       <Text fontSize={'13px'} textAlign={'left'} w={'85%'}>
-        Cash on Delivery applicable only on orders below ₹10,000
+        Cash on Delivery applicable only on orders above ₹10,000
       </Text>
       {/* checkout button  */}
       <RoutLink to='/checkout'> <Button bg={'blackAlpha.900'} colorScheme={"white"} w={'100%'} fontSize="md" borderRadius={'none'} >

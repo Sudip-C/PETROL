@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 // import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
 import axios from 'axios'
+import photo from "../../photos/photo11.jpg"
 
 
 const ProductData = () => {
@@ -51,7 +52,7 @@ if(isLoading){
           {women.length>0&&women.map(el=>(
             <Link to={`/product/${el.id}`} key={el.id} > 
             <Stack direction="column" spacing="0px">
-                <Image src={el.image} w='100%' h="400px"  bg="#F9F2F6"  />
+                <Image src={photo} w='100%' h="400px"  bg="#F9F2F6"  />
                 <Flex gap='5px' pl="10px">
                 <Text fontWeight='bold'>₹{el.price}</Text>
                 <Text textDecoration="line-through">₹{el.price}</Text>

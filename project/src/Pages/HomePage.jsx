@@ -7,10 +7,12 @@ import { Link, useSearchParams } from 'react-router-dom'
 import ProductData from '../component/PaymentPopup/ProductData'
 import FilterPage from '../component/PaymentPopup/FilterPage'
 import ProductPage from './ProductPage'
+import banner1 from '../photos/banner1.jpg'
+import banner2 from '../photos/banner2.jpg'
 
 const banner=[
-  "https://diesel.gumlet.io/banner/167825364411.webp?compress=true&q=70",
-  "https://diesel.gumlet.io/banner/1678449643Website%20Banner%20&%20Ads_1-01.webp?compress=true&q=70"
+  banner1,
+  banner2
 ]
 
 
@@ -66,40 +68,7 @@ function HomePage() {
 <img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/qlNgW4/t.resize(w:450)/product/410372560020/665/410372560020_1_3519.webp" alt="cards"/>
 </div>
 
-<div className='badges'>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614479icons-01.webp' alt="contact"/>
-  <h3>PERSONALISED STYLING</h3>
-</div>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614498icons-02.webp' alt="contact"/>
-  <h3>30 DAY FREE RETURN</h3>
-</div>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614517icons-03.webp' alt="contact"/>
-  <h3>AUTHENTIC PRODUCTS</h3>
-</div>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614563icons-04.webp' alt="contact"/>
-  <h3>FLEXIBLE & SECURE PAYMENTS</h3>
-</div>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614575icons-05.webp' alt="contact"/>
-  <h3>LIFETIME SUPPORT</h3>
-</div>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614585icons-06.webp' alt="contact"/>
-  <h3>PRE-ORDER</h3>
-</div>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614595icons-07.webp' alt="contact"/>
-  <h3>EXCLUSIVE OFFERS</h3>
-</div>
-<div>
-  <img src='https://diesel.gumlet.io/cms_images/1671614606icons-08.webp' alt="contact"/>
-  <h3>FREE SHIPPING</h3>
-</div>
-</div>
+
 
 <div className='bottom-banner'>
 <img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/qlNgW4/original/banner/1732709128Desktop_3.webp?compress=true&q=70" alt="banner"/>

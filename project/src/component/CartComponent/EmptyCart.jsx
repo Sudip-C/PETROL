@@ -1,4 +1,5 @@
-
+import Lottie from "lottie-react";
+import emptyCart from "../../photos/Empty Order.json"
 import {
     Box,
     Flex,
@@ -25,7 +26,9 @@ const EmptyCart = () => {
             <Heading fontSize="25px" fontWeight="bolder" pb={'20px'} textAlign={'center'}>
                 YOUR CART
             </Heading>
-            <Image m={'auto'} w='400px' src="https://arteno.serveradda.in/assets/images/deafult/emptycart.gif" />
+            <Box width={'200px'} margin="auto" >
+            <Lottie animationData={emptyCart}  loop={true}/>
+            </Box>
             <Flex mt={'20px'}
                 direction={{ base: 'column', lg: 'row', }}
                 alignItems={'center'}

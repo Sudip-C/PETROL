@@ -86,7 +86,7 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
-
+const navigate=useNavigate()
   return (
     <Stack direction={'row'} spacing={4} w="100%">
 

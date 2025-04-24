@@ -1,7 +1,7 @@
 import { Box, Flex, Input, Checkbox, Grid, Text, Heading, Center, HStack , Select} from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import {
-    Select,
+    
     Menu,
     MenuButton,
     MenuList,

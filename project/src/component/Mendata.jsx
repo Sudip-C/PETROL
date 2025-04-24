@@ -2,7 +2,7 @@ import { Box, Grid, Image, Text ,Stack, Flex,  } from '@chakra-ui/react'
 import axios from 'axios'
 import React, {useState, useEffect } from 'react'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
-
+import photo from "../photos/photo4.jpg"
 const MenData = () => {
 const [isLoading,setisLoading]=useState(false)
 const[Menproduct,setMenProduct]=useState([])
@@ -34,7 +34,7 @@ return (
           {Menproduct.length>0&&Menproduct.map(el=>(
             <Link to={`/product/${el.id}`} key={el.id} > 
             <Stack direction="column" spacing="0px">
-                <Image src={el.image} w='100%' h="400px"  bg="#F9F2F6"  />
+                <Image src={photo} w='100%' h="400px"  bg="#F9F2F6"  />
                 <Flex gap='5px' pl="10px">
                 <Text fontWeight='bold'>₹{el.price}</Text>
                 <Text textDecoration="line-through">₹{el.price}</Text>
