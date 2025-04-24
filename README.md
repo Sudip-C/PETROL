@@ -1,6 +1,6 @@
 # PETROL
 
-https://hot-caption.netlify.app
+https://petrolco.netlify.app
 
 ![PETROL - Google Chrome 03-04-2023 10_43_22](https://user-images.githubusercontent.com/110247476/229423774-8be01bf0-2bc8-4586-a7bc-785d76bdba85.png)
 
